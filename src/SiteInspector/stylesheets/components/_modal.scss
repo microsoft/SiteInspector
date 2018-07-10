@@ -1,0 +1,80 @@
+.si-modal-overlay {
+    font-family: "Segoe UI", SegoeUI, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: $panel-font-color;
+    z-index: 2147483647 - 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    outline: 0;
+    display: block;
+    background: rgba(166, 166, 166, .5);
+
+    .c-glyph:before,
+    .c-glyph:after,
+    .c-glyph:hover:before,
+    .c-glyph:hover:after {
+        text-decoration: none;
+    }
+
+    .c-glyph:before, .c-glyph:after {
+        font-family: "FW-MDL2";
+        display: inline-block;
+    }
+
+    .c-glyph.glyph-clear:before {
+        content: "\E894";
+    }
+
+    .si-modal-dialog {
+        outline: 0;
+        position: absolute;
+        top: $modal-padding;
+        right: $modal-padding;
+        bottom: $modal-padding;
+        left: $modal-padding;
+
+        .si-modal-content {
+            display: flex;
+            flex-flow: column;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+
+            .si-modal-header {
+                background-color: $tab-container-background-color;
+                flex: 0 1 $header-height;
+                display: flex;
+                min-height: $header-height;
+                font-size: 24px;
+                padding: 0px $tab-container-padding;
+                justify-content: space-between;
+
+                .si-modal-header-title,
+                .si-close-panel-icon {
+                    line-height: $header-height - 2px;
+                    color: white;
+                }
+            }
+
+            .si-modal-body {
+                background-color: $panel-background-color;
+                flex: 1 1 auto;
+                overflow: auto;
+                position: relative;
+                padding: 0px 10px;
+
+                .ace_editor {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+        }
+    }
+}

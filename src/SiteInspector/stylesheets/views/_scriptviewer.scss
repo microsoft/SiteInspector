@@ -1,0 +1,98 @@
+.si-script-viewer-container {
+  .si-script-viewer-header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 $tab-container-padding $tab-container-padding $tab-container-padding;
+
+    .c-select {
+      min-width: 0;
+      max-width: 1000px;
+
+      label {
+        display: none;
+      }
+
+      & > div {
+        display: block;
+
+        & > button {
+          transform: none;
+          width: 100%;
+        }
+      }
+    }
+
+    & > *:first-child {
+      margin: 12px 8px 0 0;
+      flex: 1;
+      height: $input-height;
+    }
+
+    & > button {
+      flex-shrink: 1;
+      min-width: 0;
+      height: $input-height;
+    }
+  }
+
+  .si-add-or-update-script-form {
+    padding: 0 $tab-container-padding $tab-container-padding $tab-container-padding;
+
+    input, textarea {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+
+  .si-script-content {
+    .si-script-description,
+    .si-script-controls {
+      flex-shrink: 1;
+    }
+
+    .si-script-description {
+      padding: 0 $tab-container-padding $tab-container-padding $tab-container-padding;
+    }
+
+    .si-tab-navigation {
+      min-height: $min-height;
+
+      & > .si-tab-content {
+        flex: 1;
+        padding: $tab-container-padding;
+        overflow: visible;
+      }
+    }
+
+    .si-script-controls {
+      padding: 0 $tab-container-padding $tab-container-padding $tab-container-padding;
+
+      button {
+        height: $input-height;
+        margin-right: $tab-container-padding;
+        min-width: 0;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      .si-run-button {
+        width: 75px;
+      }
+    }
+
+    .si-code-container {
+      position: relative;
+
+      .si-script-username {
+        position: absolute;
+        bottom: -20px;
+        right: 0;
+        padding: 4px;
+        z-index: 1;
+        font-size: .8em;
+      }
+    }
+  }
+}

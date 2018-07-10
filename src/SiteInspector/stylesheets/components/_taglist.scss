@@ -1,0 +1,80 @@
+.si-tag-list {
+  // $tag-focused-color: #5b96c4;
+  // $tag-primary-color: #6bb1e8;
+  $tag-focused-color: #005fa7;
+  $tag-primary-color: #0069ba;
+
+  .si-tag-container {
+    font-size: 12px;
+    color: #fff;
+    background-color: $tag-primary-color;
+    display: inline-block;
+    margin-right: $tab-container-padding;
+    margin-bottom: $tab-container-padding / 2;
+    height: $input-height;
+
+    .si-tag-label {
+      height: $input-height;
+      line-height: 13px;
+      padding: 0px 7px;
+      white-space: nowrap;
+      cursor: default;
+      display: inline-block;
+      font-size: 16px;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .si-tag-button {
+      padding: 0px 3px;
+      font-size: 10px;
+      line-height: $input-height;
+      cursor: pointer;
+      display: inline-block;
+      height: $input-height;
+      width: $input-height;
+      text-align: center;
+
+      .si-tag-add-icon {
+        font-family: "FW-MDL2";
+
+        &:after {
+          content: "\E710";
+        }
+      }
+
+      .si-tag-delete-icon {
+        font-family: "FW-MDL2";
+
+        &:after {
+          content: "\E894";
+        }
+      }
+
+      &:hover,
+      &:active {
+        background-color: $tag-focused-color;
+      }
+    }
+
+    &:active, &:focus {
+      background-color: $tag-focused-color;
+      outline: none;
+
+      .si-tag-button {
+        &:hover {
+          background-color: $tag-focused-color;
+        }
+      }
+    }
+  }
+
+  input.si-tag-input[type="text"]{
+    margin: 0;
+    display: inline-block;
+  }
+}

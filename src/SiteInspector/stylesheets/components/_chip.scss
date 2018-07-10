@@ -1,0 +1,26 @@
+.si-chip {
+  display: inline-flex;
+  align-self: flex-start;
+  font-size: 16px;
+  border-radius: 25px;
+  background-color: #ffffff;
+  line-height: 30px;
+
+  a {
+      padding: 0;
+  }
+
+  .urlpad {
+      padding: 0 8px;
+  }
+
+  span {
+      color: #ffffff;
+      background-color: #5C781C;
+      height: 30px;
+      width: 30px;
+      border-radius: 50%;
+      line-height: 30px;
+      text-align: center;
+  }
+}

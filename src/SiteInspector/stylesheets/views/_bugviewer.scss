@@ -1,0 +1,69 @@
+.bug-container {
+  height: 100%;
+  min-height: 400px;
+
+  > div {
+    height: 100%;
+  }
+
+  .si-data-table {
+    height: 100%;
+
+    #refreshBugButton {
+      padding: 1px 6px;
+      width: $input-height;
+    }
+  }
+
+  .authentication-button > span {
+    margin-right: 5px;
+  }
+
+  input[type=text]::-ms-clear {
+    display: none
+  }
+
+  .tfs-link {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+
+  .add-bug-form {
+    padding: 0 $tab-container-padding $tab-container-padding $tab-container-padding;
+
+    input, textarea, .c-select {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    input.si-tag-input {
+      width: 100px;
+    }
+
+    .c-label {
+      font-weight: 400;
+      margin-top: 10px;
+    }
+
+    .c-select {
+      > div, button {
+        max-width: 100%;
+        width: 100%;
+        text-align: left;
+      }
+
+      button {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        direction: rtl;
+        padding-right: 35px;
+      }
+
+      ul {
+        width: auto;
+        max-width: 1000px;
+      }
+    }
+  }
+}
