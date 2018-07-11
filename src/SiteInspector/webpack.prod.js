@@ -11,9 +11,7 @@ module.exports = env => (merge(common, {
     new webpack.DefinePlugin({
       'process.env': {
         BUILD_BUILDNUMBER: JSON.stringify(process.env.BUILD_BUILDNUMBER),
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
-        LOCAL_FD: JSON.stringify((env && env.localFD) || 'remote'),
-        EDGE_BUILD: (env && env.edgeBuild),
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
       },
     }),
   ],

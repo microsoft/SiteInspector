@@ -6,12 +6,10 @@ import thunk from 'redux-thunk';
 import throttle from 'lodash.throttle';
 import { saveState, loadState, deleteState } from './localStorage';
 import createMainReducer from './reducers';
-import AuthenticationStates from '../shared/authenticationStates';
 
 let middleware = applyMiddleware(thunk);
 
-if (process.env.NODE_ENV !== 'production'
-  && !process.env.EDGE_BUILD) {
+if (process.env.NODE_ENV !== 'production') {
   middleware = composeWithDevTools(middleware);
 }
 
@@ -27,15 +25,7 @@ export function injectAsyncReducer(storeToInject, asyncReducer) {
 }
 
 store.subscribe(throttle(() => {
-  if (store.getState().ShellState.authenticationState === AuthenticationStates.GRANTED) {
     saveState(store.getState(), store.getState().ShellState.activeState);
-  }
-
-  // When token is expired it is invalidated and forces sign out. In this case, we want to delete
-  // the saved state as well.
-  if (store.getState().ShellState.authenticationState === AuthenticationStates.SIGNED_OUT) {
-    deleteState();
-  }
 }, 1000));
 
 export default store;

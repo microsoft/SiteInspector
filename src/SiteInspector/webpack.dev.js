@@ -26,7 +26,6 @@ export default merge(common, {
       __DEV__: true,
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
-        LOCAL_FD: JSON.stringify('remote'),
       },
     }),
     new webpack.HotModuleReplacementPlugin(),

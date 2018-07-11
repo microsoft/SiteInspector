@@ -4,21 +4,13 @@ import assignIn from 'lodash.assignin';
 import config from '../shared/config';
 import store from './configureStore';
 import {
-  setTokenFromLocalStorage,
   registerTab,
-  invalidateToken,
-  setBuildVersion,
 } from '../views/Shell/actions';
 import {
   setSharedStateConfigData,
-  setLocaleValues,
   setInitFlag,
   signalUrlChange,
 } from '../shared/actions';
-import { setAuthorizationHeader } from '../dal/SiteInspectorService';
-import { isAuthExpired } from '../utils/SiteInspectorHelper';
-import initializeXHRInterceptor from '../interceptors/xhr';
-import initializeJSLLInterceptor from '../interceptors/jsll';
 import { transformLocalizationUrlTemplateIntoRegex } from '../shared/localization';
 
 export const initializeShell = (overrideConfig) => {
@@ -40,12 +32,6 @@ export const initializeShell = (overrideConfig) => {
   let oldLocation = location.href;
   // Interval function runs ever second
   setInterval(() => {
-    // Check if auth needs to be expired
-    if (store.getState().SharedState.sifd.token &&
-        store.getState().ShellState.authenticationSuccessTime &&
-        isAuthExpired(store.getState().ShellState.authenticationSuccessTime)) {
-      store.dispatch(invalidateToken());
-    }
     if (location.href !== oldLocation) {
       store.dispatch(signalUrlChange());
       oldLocation = location.href;
@@ -60,7 +46,7 @@ export const initializeShell = (overrideConfig) => {
         store.dispatch(registerTab(tab));
       } else {
         // Dynamic tabs
-        const dynamicTabScriptId = `siteInspectorDynamicTabComponent:${tab.id}`;
+        const dynamicTabScriptId = `siteInspectorDynamicTab:${tab.id}`;
 
         if (!document.getElementById(dynamicTabScriptId)) {
           const dynamicTabScript = document.createElement('script');
@@ -73,42 +59,5 @@ export const initializeShell = (overrideConfig) => {
       }
     });
   }
-
-  // If valid token in local storage, set state to GRANTED
-  if (typeof Storage !== 'undefined' && typeof localStorage !== 'undefined') {
-    const authToken = localStorage.getItem('siteInspectorFDtoken');
-    if (authToken) {
-      const values = authToken.split(',');
-      if (values.length === 3) {
-        const authSuccessTime = parseInt(values[2], 10);
-        if (!isAuthExpired(authSuccessTime)) {
-          setAuthorizationHeader(values[0]);
-          store.dispatch(setTokenFromLocalStorage({
-            token: values[0],
-            user: values[1],
-            authenticationSuccessTime: authSuccessTime,
-          }));
-        }
-      }
-    }
-  }
-
-  // Set locale values
-  let locale = '';
-  if (config.localizationUrlTemplate) {
-    const localeRegex =
-      transformLocalizationUrlTemplateIntoRegex(config.localizationUrlTemplate);
-    const localeMatches = localeRegex.exec(window.location.href);
-    if (localeMatches && localeMatches.length === 4) {
-      locale = localeMatches[2];
-    }
-  }
-  store.dispatch(setLocaleValues(locale));
-
   store.dispatch(setInitFlag(true));
 };
-
-// Interceptors are turned on by default
-// Logic to turn off either via config or after all tabs have been loaded will come in later
-initializeXHRInterceptor();
-initializeJSLLInterceptor();
