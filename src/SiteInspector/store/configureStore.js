@@ -4,7 +4,7 @@ import { applyMiddleware, createStore } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
 import throttle from 'lodash.throttle';
-import { saveState, loadState, deleteState } from './localStorage';
+import { saveState, loadState } from './localStorage';
 import createMainReducer from './reducers';
 
 let middleware = applyMiddleware(thunk);
