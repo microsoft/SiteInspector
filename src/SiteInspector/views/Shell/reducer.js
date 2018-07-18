@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 import {
   TOGGLE_SHELL,
   SET_BUILD_VERSION,

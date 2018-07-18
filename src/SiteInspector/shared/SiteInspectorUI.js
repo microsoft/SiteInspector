@@ -1,4 +1,9 @@
-// components
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
+/* components to export for use outside the shell
+ * 
+ * */
 import BladeComponent from './components/Blade';
 import ChipComponent from './components/Chip';
 import DatePicker from './components/DatePicker';

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 /* eslint  import/prefer-default-export: 'off' */
 import moment from 'moment';
 import assignIn from 'lodash.assignin';
@@ -11,7 +14,6 @@ import {
   setInitFlag,
   signalUrlChange,
 } from '../shared/actions';
-import { transformLocalizationUrlTemplateIntoRegex } from '../shared/localization';
 
 export const initializeShell = (overrideConfig) => {
   // Override default config with provided config and load into

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 import { fetchAuthenticationToken, setAuthorizationHeader, cleanTokenData, submitLog } from '../../dal/SiteInspectorService';
 import authenticationStates from '../../shared/authenticationStates';
 

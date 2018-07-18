@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 import { combineReducers } from 'redux';
 import ShellReducer from '../views/Shell/reducer';
 import SharedReducer from '../shared/reducer';
