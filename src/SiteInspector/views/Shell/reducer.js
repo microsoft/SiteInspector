@@ -3,48 +3,27 @@
 
 import {
   TOGGLE_SHELL,
-  SET_BUILD_VERSION,
   SET_SHELL_PANEL_POSITION,
   REGISTER_TAB,
   SET_CURRENT_PATH,
-  SET_AUTH_STATE,
-  REQUEST_AUTH_TOKEN,
-  RECEIVE_AUTH_TOKEN_SUCCESS,
-  RECEIVE_AUTH_TOKEN_ERROR,
-  REQUEST_AUTH_TOKEN_TIMEOUT,
-  RECEIVE_TOKEN_FROM_LOCAL_STORAGE,
-  INVALIDATE_TOKEN,
   RESET_ROUTE_UPDATE,
-  TOGGLE_DISABLE_MODAL,
 } from './actions';
 import routes from '../../router/routes';
-import authenticationStates from '../../shared/authenticationStates';
 import config from '../../shared/config';
 
 export const initialState = {
-  authenticationState: authenticationStates.SIGNED_OUT,
   currentPath: '',
   activeState: '',
   position: 'right',
   tabs: [],
-  authenticationSuccessTime: 0,
   visible: false,
   routesUpdated: false,
-  isVisibleDisableModal: false,
 };
 
 const ShellReducer = (state = initialState, action) => {
   switch (action.type) {
     case TOGGLE_SHELL: {
       return Object.assign({}, state, { visible: !state.visible });
-    }
-    case TOGGLE_DISABLE_MODAL: {
-      return { ...state, isVisibleDisableModal: !state.isVisibleDisableModal };
-    }
-    case SET_BUILD_VERSION: {
-      return Object.assign({}, state, {
-        buildVersion: action.buildVersion,
-      });
     }
     case SET_SHELL_PANEL_POSITION: {
       return { ...state, position: action.position };
@@ -95,49 +74,6 @@ const ShellReducer = (state = initialState, action) => {
       return { ...state,
         tabs: config.tabs.map(tab => tab.id).filter(tab => tabs.indexOf(tab) !== -1),
         routesUpdated,
-      };
-    }
-    case SET_AUTH_STATE: {
-      return { ...state, authenticationState: action.authenticationState };
-    }
-    case REQUEST_AUTH_TOKEN: {
-      return { ...state, authenticationState: action.authenticationState };
-    }
-    case RECEIVE_AUTH_TOKEN_ERROR: {
-      return { ...state, authenticationState: action.authenticationState };
-    }
-    case RECEIVE_AUTH_TOKEN_SUCCESS: {
-      let authenticationSuccessTime = new Date().getTime();
-      if (action.createdOn) {
-        authenticationSuccessTime = action.createdOn.getTime();
-      }
-      if (typeof Storage !== 'undefined' && typeof localStorage !== 'undefined') {
-        localStorage.setItem('siteInspectorFDtoken', `${action.token},${action.user},${authenticationSuccessTime}`);
-      }
-      return {
-        ...state,
-        authenticationState: action.authenticationState,
-        authenticationSuccessTime,
-      };
-    }
-    case REQUEST_AUTH_TOKEN_TIMEOUT: {
-      return { ...state, token: action.token, authenticationState: action.authenticationState };
-    }
-    case RECEIVE_TOKEN_FROM_LOCAL_STORAGE: {
-      return {
-        ...state,
-        authenticationState: action.authenticationState,
-        authenticationSuccessTime: action.authenticationSuccessTime,
-      };
-    }
-    case INVALIDATE_TOKEN: {
-      if (typeof Storage !== 'undefined' && typeof localStorage !== 'undefined') {
-        localStorage.removeItem('siteInspectorFDtoken');
-      }
-      return {
-        ...state,
-        authenticationState: action.authenticationState,
-        authenticationSuccessTime: 0,
       };
     }
     default:

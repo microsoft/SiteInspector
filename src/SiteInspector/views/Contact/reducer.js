@@ -11,7 +11,7 @@ const getParameterByName = (name) => {
 
 export const initialState = {
   title: 'SiteInspector',
-  email: 'storeinspector@microsoft.com',
+  email: 'siteinspector@microsoft.com',
 };
 
 const ContactViewerReducer = (state = initialState, action) => {

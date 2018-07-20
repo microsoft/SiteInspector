@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 import uuidV4 from 'uuid/v4';
 import store from '../store/configureStore';
-import { addHttpInterceptItem } from '../shared/actions';
+import { addXHRInterceptItem } from '../shared/actions';
 
 export default () => {
   let xhrCounter = 0;
@@ -28,14 +28,8 @@ export default () => {
                   self.httpInfo.response.headers[(header.substr(0, index)).toUpperCase()] =
                         header.substr(index + 2);
                 }
-              });
-
-              const requestMsCv = this.httpInfo.request.headers['MS-CV'];
-              const responseMsCv = this.httpInfo.response.headers['MS-CV'];
-
-              if (requestMsCv || responseMsCv) {
-                store.dispatch(addHttpInterceptItem(this.httpInfo));
-              }
+                });
+                store.dispatch(addXHRInterceptItem(this.httpInfo));
             }
           } catch (e) { console.log(e); }
         }

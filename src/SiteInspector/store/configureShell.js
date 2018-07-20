@@ -6,6 +6,7 @@ import moment from 'moment';
 import assignIn from 'lodash.assignin';
 import config from '../shared/config';
 import store from './configureStore';
+import initializeXHRInterceptor from '../interceptors/xhr';
 import {
   registerTab,
 } from '../views/Shell/actions';
@@ -26,10 +27,6 @@ export const initializeShell = (overrideConfig) => {
     window.siteInspector.config = config;
   }
   store.dispatch(setSharedStateConfigData(config));
-
-  // Setup metadata
-  const buildVersion = process.env.BUILD_BUILDNUMBER ? process.env.BUILD_BUILDNUMBER : `localhost.${moment()}`;
-  store.dispatch(setBuildVersion(buildVersion));
 
   let oldLocation = location.href;
   // Interval function runs ever second
@@ -60,6 +57,11 @@ export const initializeShell = (overrideConfig) => {
         }
       }
     });
-  }
+    }
+    // By default Xhr interceptor is turned off; unless turned on by config
+    if (Object.prototype.hasOwnProperty.call(config, 'interceptXhr') && config.interceptXhr === "true") {
+        initializeXHRInterceptor();
+    }
+
   store.dispatch(setInitFlag(true));
 };

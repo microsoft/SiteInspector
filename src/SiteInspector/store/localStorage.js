@@ -27,13 +27,6 @@ export const loadState = () => {
     }
     const parsedState = JSON.parse(serializedState);
 
-     // Do not load from local storage if build numbers are different.
-    if (!process.env.BUILD_BUILDNUMBER ||
-      parsedState.ShellState.buildVersion !== process.env.BUILD_BUILDNUMBER) {
-      deleteState();
-      return undefined;
-    }
-
     return parsedState;
   } catch (err) {
     return undefined;

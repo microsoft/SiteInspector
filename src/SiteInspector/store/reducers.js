@@ -11,7 +11,6 @@ export default function createMainReducer(asyncReducers) {
     ShellState: ShellReducer,
     SharedState: SharedReducer,
     ContactViewerState: ContactViewerReducer,
-    form: ReduxFormReducer,
     ...asyncReducers,
   });
 }

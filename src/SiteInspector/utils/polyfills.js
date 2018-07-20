@@ -163,3 +163,42 @@ if (typeof Object.assign != 'function') {
     configurable: true
   });
 }
+
+// The following code is sourced from:
+// https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+//
+// Any copyright is dedicated to the Public Domain. http://creativecommons.org/publicdomain/zero/1.0/
+//
+// Only polyfill for IE11 since Heatmap won't load properly
+if (!Object.prototype.forEach && navigator.userAgent.match(/Trident\/7\./) !== null) {
+    Object.prototype.forEach = function (callback) {
+        var T, k;
+
+        if (this == null) {
+            throw new TypeError('Object is null or not defined.');
+        }
+
+        var O = Object(this);
+        var len = O.length >>> 0;
+
+        if (typeof callback !== 'function') {
+            throw new TypeError(callback + ' is not a function.');
+        }
+
+        if (arguments.length > 1) {
+            T = arguments[1];
+        }
+
+        k = 0;
+        while (k < len) {
+            var kValue;
+
+            if (k in O) {
+                kValue = O[k];
+                callback.call(T, kValue, k, O);
+            }
+
+            k++;
+        }
+    };
+}

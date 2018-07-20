@@ -13,7 +13,6 @@ module.exports = env => (merge(common, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        BUILD_BUILDNUMBER: JSON.stringify(process.env.BUILD_BUILDNUMBER),
         NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
       },
     }),

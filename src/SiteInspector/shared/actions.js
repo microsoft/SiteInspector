@@ -3,9 +3,10 @@
 
 import { MessageBarType } from 'office-ui-fabric-react/lib/MessageBar';
 export const ADD_MESSAGE = 'ADD_MESSAGE';
+export const ADD_XHR_ITEM = 'ADD_XHR_ITEM';
 export const COLLAPSE_MESSAGE = 'COLLAPSE_MESSAGE';
-export const REMOVE_MESSAGE = 'REMOVE_MESSAGE';
 export const SET_INIT_FLAG = 'SET_INIT_FLAG';
+export const REMOVE_MESSAGE = 'REMOVE_MESSAGE';
 
 export function addErrorMessage(text) {
     return function start(dispatch) {
@@ -13,6 +14,13 @@ export function addErrorMessage(text) {
             text,
             type: MessageBarType.error,
         }));
+    };
+}
+
+export function addXHRInterceptItem(payload) {
+    return {
+        type: ADD_XHR_ITEM,
+        payload,
     };
 }
 

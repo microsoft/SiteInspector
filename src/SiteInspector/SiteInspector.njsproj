@@ -35,7 +35,7 @@
     <Compile Include="router\routes.js">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="router\ShellInspectorRouter.js" />
+    <Compile Include="router\SiteInspectorRouter.js" />
     <Compile Include="shared\components\DatePicker.jsx" />
     <Compile Include="shared\components\MessageBar.jsx" />
     <Compile Include="shared\components\Modal.jsx" />
