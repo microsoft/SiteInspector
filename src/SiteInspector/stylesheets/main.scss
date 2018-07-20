@@ -9,22 +9,17 @@
   @import 'components/blade';
   @import 'components/chip';
   @import 'components/datatable';
-  @import 'components/highlightedcode';
   @import 'components/listitem';
   @import 'components/shared';
-  @import 'components/validation';
   @import 'components/spinner';
   @import 'components/linechart';
   @import 'components/datepicker';
-  @import 'components/taglist';
   @import 'components/tabnavigation';
   @import 'components/messagebar';
 
   // views
-  @import 'views/bugviewer';
   @import 'views/contactviewer';
   @import 'views/shell';
-  @import 'views/scriptviewer';
 }
 
 @import 'components/modal';
