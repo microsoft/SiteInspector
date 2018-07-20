@@ -1,6 +1,11 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 @import '../node_modules/highlight.js/styles/vs.css';
+
 //fluent web related individual imports as fw_core has a broken .scss file
 @import '../node_modules/@ms-fw/fw-stylesheets/styles/assets/styles/_fw_header.scss';
+
 @import '../node_modules/@ms-fw/fw-stylesheets/styles/assets/styles/_fw_dependencies.scss';
 @import '../node_modules/@ms-fw/fw-stylesheets/styles/assets/styles/_foundation.scss';
 @import '../node_modules/@ms-fw/fw-stylesheets/styles/assets/styles/_grid.scss';

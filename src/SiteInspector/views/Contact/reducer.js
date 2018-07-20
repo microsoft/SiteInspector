@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 import { SET_INIT_FLAG } from '../../shared/actions';
 import { getTabParameters } from '../../utils/SiteInspectorHelper';
 

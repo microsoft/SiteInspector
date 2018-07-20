@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 import { MessageBarType } from 'office-ui-fabric-react/lib/MessageBar';
 export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const ADD_XHR_ITEM = 'ADD_XHR_ITEM';

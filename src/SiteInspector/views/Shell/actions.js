@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 export const TOGGLE_SHELL = 'TOGGLE_SHELL';
 export const SET_CURRENT_PATH = 'SET_CURRENT_PATH';
 export const SET_SHELL_PANEL_POSITION = 'SET_SHELL_PANEL_POSITION';

@@ -1,3 +1,5 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
 import uuidV4 from 'uuid/v4';
 import store from '../store/configureStore';
 import { addXHRInterceptItem } from '../shared/actions';

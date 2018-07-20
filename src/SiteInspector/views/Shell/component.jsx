@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ActionMenu } from '../../shared/components/FluentWeb';

@@ -1,5 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
 
+/* eslint-disable import/no-extraneous-dependencies */
 import webpack from 'webpack';
 import merge from 'webpack-merge';
 import path from 'path';

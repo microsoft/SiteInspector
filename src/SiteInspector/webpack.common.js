@@ -1,5 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
 
+/* eslint-disable import/no-extraneous-dependencies */
 const path = require('path');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
