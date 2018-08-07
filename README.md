@@ -1,4 +1,11 @@
 
+# Welcome to SiteInspector.js!
+
+SiteInspector.js is a framework for a lightweight pane that slides out from the side of your browser 
+window and can be used to enhance any web site or portal with additional, contextual content. Use it
+to display usage statistics, expose diagnostic tools, show performance analytics, or any other useful 
+information to help you manage and maintain your site.
+
 # Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
