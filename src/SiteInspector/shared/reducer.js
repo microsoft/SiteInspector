@@ -2,28 +2,27 @@
 // Licensed under the MIT License.
 
 import {
-    ADD_MESSAGE,
-    ADD_XHR_ITEM,
+  ADD_MESSAGE,
+  ADD_XHR_ITEM,
   COLLAPSE_MESSAGE,
   REMOVE_MESSAGE,
   SET_INIT_FLAG,
 } from './actions';
-import constants from '../shared/constants';
 
 export const initialState = {
   siteInspectorInitialized: false,
-    messages: [],
-    xhrItems: []
+  messages: [],
+  xhrItems: [],
 };
 
 const SharedReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_MESSAGE: {
       return { ...state, messages: [...state.messages, action.message] };
-      }
-      case ADD_XHR_ITEM: {
-          return { ...state, xhrItems: [...state.xhrItems, action.payload] };
-      }
+    }
+    case ADD_XHR_ITEM: {
+      return { ...state, xhrItems: [...state.xhrItems, action.payload] };
+    }
     case COLLAPSE_MESSAGE: {
       // eslint-disable-next-line no-confusing-arrow
       const messages = state.messages.map(message =>

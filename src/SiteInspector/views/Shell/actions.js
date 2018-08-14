@@ -31,3 +31,7 @@ export const registerTab = tab => ({
 export const resetRouteUpdate = () => ({
   type: RESET_ROUTE_UPDATE,
 });
+
+export const logSiteInspectorTabChange = function logSiteInspectorTabChange(view) {
+  console.log(`Tab changed to: ${view}`);
+};

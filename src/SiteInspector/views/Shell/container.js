@@ -7,6 +7,7 @@ import { toggleShell,
   setShellPanelPosition,
   setCurrentPath,
   resetRouteUpdate,
+  logSiteInspectorTabChange,
 } from './actions';
 import { removeMessage } from '../../shared/actions';
 
@@ -17,7 +18,7 @@ const mapStateToProps = state => ({
   tabs: state.ShellState.tabs,
   visible: state.ShellState.visible,
   siteInspectorInitialized: state.SharedState.siteInspectorInitialized,
-  routesUpdated: state.ShellState.routesUpdated
+  routesUpdated: state.ShellState.routesUpdated,
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -36,7 +37,7 @@ const mapDispatchToProps = dispatch => ({
   },
   setShellPanelPosition: (position) => {
     dispatch(setShellPanelPosition(position));
-  }
+  },
 });
 
 const ShellContainer = connect(

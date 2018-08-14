@@ -2,7 +2,6 @@
 // Licensed under the MIT License.
 
 /* eslint  import/prefer-default-export: 'off' */
-import moment from 'moment';
 import assignIn from 'lodash.assignin';
 import config from '../shared/config';
 import store from './configureStore';
@@ -57,11 +56,11 @@ export const initializeShell = (overrideConfig) => {
         }
       }
     });
-    }
+  }
     // By default Xhr interceptor is turned off; unless turned on by config
-    if (Object.prototype.hasOwnProperty.call(config, 'interceptXhr') && config.interceptXhr === "true") {
-        initializeXHRInterceptor();
-    }
+  if (Object.prototype.hasOwnProperty.call(config, 'interceptXhr') && config.interceptXhr === 'true') {
+    initializeXHRInterceptor();
+  }
 
   store.dispatch(setInitFlag(true));
 };
