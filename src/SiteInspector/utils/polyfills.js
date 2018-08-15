@@ -4,7 +4,11 @@
 /* eslint-disable */
 
 import { polyfill } from 'es6-promise';
-polyfill();
+
+// Polyfill promise only if does not exist
+if (!window.Promise) {
+    polyfill();
+}
 
 // Manual polyfills that cannot be filled by babel-transform.
 
