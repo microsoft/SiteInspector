@@ -28,7 +28,7 @@ export function injectAsyncReducer(storeToInject, asyncReducer) {
 }
 
 store.subscribe(throttle(() => {
-    saveState(store.getState(), store.getState().ShellState.activeState);
+  saveState(store.getState(), store.getState().ShellState.activeState);
 }, 1000));
 
 export default store;

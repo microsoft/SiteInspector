@@ -5,12 +5,7 @@
 const config = {
   title: 'SiteInspector.js',
   aboutUrl: 'https://github.com/Microsoft/SiteInspector/blob/master/README.md',
-  tabs: [
-    {
-      title: 'Contact Us',
-      id: 'contact',
-    }
-  ],
+  tabs: [],
 };
 
 export default config;

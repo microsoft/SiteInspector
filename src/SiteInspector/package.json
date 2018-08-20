@@ -21,6 +21,7 @@
     "classnames": "^2.2.5",
     "lodash.assignin": "^4.2.0",
     "lodash.throttle": "^4.1.1",
+    "moment": "^2.22.2",
     "office-ui-fabric-react": "^5.54.0",
     "prop-types": "^15.5.10",
     "raf-throttle": "^2.0.3",

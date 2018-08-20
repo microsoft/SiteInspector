@@ -2,7 +2,7 @@
 // Licensed under the MIT License.
 
 /* components to export for use outside the shell
- * 
+ *
  * */
 import BladeComponent from './components/Blade';
 import ChipComponent from './components/Chip';

@@ -6,11 +6,6 @@ import PropTypes from 'prop-types';
 import { ActionMenu } from '../../shared/components/FluentWeb';
 import config from '../../shared/config';
 import SiteInspectorRouter from '../../router/SiteInspectorRouter';
-import authenticationStates from '../../shared/authenticationStates';
-import Spinner from '../../shared/components/Spinner';
-import AuthenticationLink from '../../shared/components/AuthenticationLink';
-import UserAccount from '../../shared/components/UserAccount';
-import Modal from '../../shared/components/Modal';
 
 // eslint-disable-next-line
 const SITab = require('-!babel-loader!svg-react-loader!../../assets/SITab.svg');
@@ -20,19 +15,19 @@ const Logo = config.logo
   // eslint-disable-next-line
     : require('-!babel-loader!svg-react-loader!../../assets/MSFTLogo.svg');
 
-const Shell = ({ siteInspectorInitialized, currentPath, customerCssPath,
-    position, tabs, visible, onToggleShell,
-    setCurrentPath, setShellPanelPosition, resetRouteUpdate,
+const Shell = ({ siteInspectorInitialized, currentPath, position,
+    tabs, visible, onToggleShell, setCurrentPath,
+    setShellPanelPosition, resetRouteUpdate,
     routesUpdated, messages, removeMessage }) => {
-    const attachCustomToggle = () => {
-        const elem = document.getElementById(config.toggleElementId);
-        if (elem && elem.className.indexOf('si-attached') === -1) {
-            elem.addEventListener('click', onToggleShell, false);
+  const attachCustomToggle = () => {
+    const elem = document.getElementById(config.toggleElementId);
+    if (elem && elem.className.indexOf('si-attached') === -1) {
+      elem.addEventListener('click', onToggleShell, false);
             // prevent multiple events from attaching
-            elem.className += ' si-attached';
-        }
-        return elem !== null;
-    };
+      elem.className += ' si-attached';
+    }
+    return elem !== null;
+  };
 
   const getMenuItems = () => {
     const items = [
@@ -50,15 +45,15 @@ const Shell = ({ siteInspectorInitialized, currentPath, customerCssPath,
   return (
         siteInspectorInitialized ? <div className="shell-panel">
           {attachCustomToggle() ||
-              <div className="shell-client-tab-container shadow">
-              <a className="shell-client-tab" onClick={onToggleShell} href="javascript:void(0)">
-                  <SITab className="shell-icon-glass" />
-                      {typeof Logo === 'string'
+          <div className="shell-client-tab-container shadow">
+            <a className="shell-client-tab" onClick={onToggleShell} href="javascript:void(0)">
+              <SITab className="shell-icon-glass" />
+              {typeof Logo === 'string'
                           ? <img className="shell-icon" src={Logo} alt="Product logo" />
                           : <Logo className="shell-icon" />
                       }
-                  </a>
-              </div>
+            </a>
+          </div>
           }
           <div className={`panel flex-column ${visible ? 'visible' : ''} ${position}`}>
             <div id="siHeader" className="header">
@@ -82,15 +77,15 @@ const Shell = ({ siteInspectorInitialized, currentPath, customerCssPath,
               </div>
             </div>
             <div className="panel-content-wrapper flex-column">
-                  <SiteInspectorRouter
-                      tabs={tabs}
-                      initialPath={currentPath}
-                      setPath={setCurrentPath}
-                      routesUpdated={routesUpdated}
-                      resetRouteUpdate={resetRouteUpdate}
-                      messages={messages}
-                      removeMessage={removeMessage}
-                  />
+              <SiteInspectorRouter
+                tabs={tabs}
+                initialPath={currentPath}
+                setPath={setCurrentPath}
+                routesUpdated={routesUpdated}
+                resetRouteUpdate={resetRouteUpdate}
+                messages={messages}
+                removeMessage={removeMessage}
+              />
             </div>
           </div>
         </div>

@@ -28,8 +28,8 @@ export default () => {
                   self.httpInfo.response.headers[(header.substr(0, index)).toUpperCase()] =
                         header.substr(index + 2);
                 }
-                });
-                store.dispatch(addXHRInterceptItem(this.httpInfo));
+              });
+              store.dispatch(addXHRInterceptItem(this.httpInfo));
             }
           } catch (e) { console.log(e); }
         }

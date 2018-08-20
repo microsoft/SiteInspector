@@ -1,6 +1,8 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable no-unused-vars */
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
@@ -13,7 +15,7 @@ module.exports = env => (merge(common, {
   plugins: [
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development')
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'development'),
       },
     }),
   ],

@@ -63,14 +63,11 @@
     <Compile Include="store\localStorage.js" />
     <Compile Include="store\reducers.js" />
     <Compile Include="utils\polyfills.js" />
-    <Compile Include="views\Contact\component.jsx" />
-    <Compile Include="views\Contact\container.js" />
-    <Compile Include="views\Contact\reducer.js" />
+    <Compile Include="utils\SiteInspectorHelper.js" />
     <Compile Include="views\Shell\actions.js" />
     <Compile Include="views\Shell\container.js" />
     <Compile Include="views\Shell\reducer.js" />
     <Compile Include="webpack.common.js" />
-    <Compile Include="webpack.config.js" />
     <Compile Include="webpack.dev.js" />
     <Compile Include="webpack.prod.js" />
     <Content Include=".babelrc" />
@@ -98,9 +95,6 @@
     <Content Include="stylesheets\components\_taglist.scss" />
     <Content Include="stylesheets\components\_validation.scss" />
     <Content Include="stylesheets\main.scss" />
-    <Content Include="stylesheets\views\_bugviewer.scss" />
-    <Content Include="stylesheets\views\_contactviewer.scss" />
-    <Content Include="stylesheets\views\_scriptviewer.scss" />
     <Content Include="stylesheets\views\_shell.scss" />
     <Content Include="stylesheets\_external.scss" />
     <Content Include="stylesheets\_fw_core_copy.scss" />
@@ -126,7 +120,6 @@
     <Folder Include="stylesheets\" />
     <Folder Include="stylesheets\components\" />
     <Folder Include="views\" />
-    <Folder Include="views\Contact\" />
     <Folder Include="views\Shell\" />
   </ItemGroup>
   <!-- Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them. -->
