@@ -1,5 +1,5 @@
 
-# Welcome to SiteInspector.js!
+# Welcome to SiteInspector.js!&nbsp;&nbsp;&nbsp; [![Build status](https://siteinspector.visualstudio.com/SiteInspector/_apis/build/status/SiteInspector-Master%20build?branch=master)](https://siteinspector.visualstudio.com/SiteInspector/_build/latest?definitionId=1&branch=master)
 
 <table>
   <tr>
@@ -10,6 +10,7 @@ to display usage statistics, expose diagnostic tools, show performance analytics
 information to help you manage and maintain your site.</td>
   </tr>  
 </table>
+
 
 
 # Contributing
