@@ -19,6 +19,7 @@
     "@ms-fw/fw-react": "^1.25.356-beta.0",
     "@ms-fw/fw-stylesheets": "^1.25.359-beta.0",
     "classnames": "^2.2.5",
+    "es6-promise": "^4.2.4",
     "lodash.assignin": "^4.2.0",
     "lodash.throttle": "^4.1.1",
     "moment": "^2.22.2",

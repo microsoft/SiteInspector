@@ -69,7 +69,7 @@
     <Compile Include="views\Shell\reducer.js" />
     <Compile Include="webpack.common.js" />
     <Compile Include="webpack.dev.js" />
-    <Compile Include="webpack.prod.js" />
+    <Compile Include="webpack.config.js" />
     <Content Include=".babelrc" />
     <Content Include=".eslintignore" />
     <Content Include=".eslintrc" />
@@ -77,6 +77,11 @@
     <Content Include=".npmrc" />
     <Content Include="assets\MSFTLogo.svg" />
     <Content Include="assets\SITab.svg" />
+    <Content Include="fonts\FWMDL2.eot" />
+    <Content Include="fonts\FWMDL2.svg" />
+    <Content Include="fonts\FWMDL2.ttf" />
+    <Content Include="fonts\FWMDL2.woff" />
+    <Content Include="fonts\FWMDL2.woff2" />
     <Content Include="index.jsx" />
     <Content Include="package.json" />
     <Content Include="stylesheets\components\_blade.scss" />
@@ -84,7 +89,6 @@
     <Content Include="stylesheets\components\_datatable.scss" />
     <Content Include="stylesheets\components\_datepicker.scss" />
     <Content Include="stylesheets\components\_fluent.scss" />
-    <Content Include="stylesheets\components\_highlightedcode.scss" />
     <Content Include="stylesheets\components\_linechart.scss" />
     <Content Include="stylesheets\components\_listitem.scss" />
     <Content Include="stylesheets\components\_messagebar.scss" />
@@ -92,8 +96,6 @@
     <Content Include="stylesheets\components\_shared.scss" />
     <Content Include="stylesheets\components\_spinner.scss" />
     <Content Include="stylesheets\components\_tabnavigation.scss" />
-    <Content Include="stylesheets\components\_taglist.scss" />
-    <Content Include="stylesheets\components\_validation.scss" />
     <Content Include="stylesheets\main.scss" />
     <Content Include="stylesheets\views\_shell.scss" />
     <Content Include="stylesheets\_external.scss" />
