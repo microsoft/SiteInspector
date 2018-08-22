@@ -1,0 +1,27 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
+@import 'glyphicons';
+@import 'variables';
+
+#site-inspector {
+  @import 'external';
+
+  // shared components
+  @import 'components/fluent';
+  @import 'components/blade';
+  @import 'components/chip';
+  @import 'components/datatable';
+  @import 'components/listitem';
+  @import 'components/shared';
+  @import 'components/spinner';
+  @import 'components/linechart';
+  @import 'components/datepicker';
+  @import 'components/tabnavigation';
+  @import 'components/messagebar';
+
+  // views
+  @import 'views/shell';
+}
+
+@import 'components/modal';

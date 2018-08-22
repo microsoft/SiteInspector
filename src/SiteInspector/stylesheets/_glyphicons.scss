@@ -1,0 +1,10 @@
+﻿// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
+$font-icon-path: "../fonts/";
+
+@font-face {
+    font-family: 'FW-MDL2';
+    src: url($font-icon-path + "FWMDL2.eot");
+    src: url($font-icon-path + "FWMDL2.eot?#iefix") format("embedded-opentype"), url($font-icon-path + "FWMDL2.woff2") format("woff2"), url($font-icon-path + "FWMDL2.woff") format("woff"), url($font-icon-path + "FWMDL2.ttf") format("truetype"), url($font-icon-path + "FWMDL2.svg") format("svg");
+}

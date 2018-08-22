@@ -1,0 +1,20 @@
+﻿.pull-right {
+  float: right;
+}
+
+.hidden {
+  display: none;
+}
+
+.flex-display-column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+// TODO - Migrate to using this. Evaluate side-effects.
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}

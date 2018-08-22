@@ -1,0 +1,54 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
+.si-blade {
+  position: absolute;
+  height: 80%;
+  width: 100%;
+  background-color: $panel-background-color;
+  transition: -webkit-transform ease 250ms;
+  transition: transform ease 250ms;
+  z-index: -1;
+  overflow: auto;
+
+  &.visible {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.75);
+  }
+
+  &.larger-width {
+    width: 133%;
+  }
+
+  .si-blade-header {
+    background-color: $header-background-color;
+    box-shadow: $header-box-shadow;
+    border-bottom: $header-border-bottom;
+    display: flex;
+    flex-shrink: 0;
+    height: $header-height;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    padding: 0px $tab-container-padding;
+
+    .si-close-panel-icon {
+      padding: 5px 0 0 0;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .si-blade-content {
+    overflow-y: auto;
+  }
+}
+
+.panel.right .si-blade.visible {
+  transform: (translate3d(-100%, 0, 0));
+}
+.panel.left .si-blade.visible {
+  transform: (translate3d(100%, 0, 0));
+}

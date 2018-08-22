@@ -1,0 +1,38 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
+.si-date-picker {
+  input.c-text-field[type="text"] {
+    font-size: 14px;
+    width: 94px;
+  }
+
+  .si-calendar-button {
+    margin: 17px 10px 0 0;
+  }
+
+  i {
+    font-style: normal;
+  }
+
+  .ms-DatePicker-monthOption {
+    line-height: 40px;
+    font-size: 12px;
+    margin: 0 11px 11px 0;
+  }
+
+  @media (min-device-width: 460px) {
+    .ms-DatePicker-dayPicker {
+      border-right: 1px solid #464646;
+    }
+  }
+
+  .si-flyout-wrapper {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  .c-flyout {
+    max-width: none;
+  }
+}
