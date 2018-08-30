@@ -1,0 +1,171 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Shared components Blade component should be rendered properly 1`] = `
+<div
+  className="si-blade flex-column visible"
+>
+  <div
+    className="si-blade-header"
+  >
+    <div
+      className="si-blade-header-title"
+    >
+      test title
+    </div>
+    <a
+      className="si-close-panel-icon c-glyph glyph-clear"
+      href="javascript:void(0)"
+      onClick={[MockFunction]}
+    />
+  </div>
+  <div
+    className="si-blade-content flex-column"
+  >
+    <div>
+      hello world
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Shared components Chip component should be rendered properly 1`] = `
+<div
+  className="si-chip"
+>
+  <a
+    aria-label="test title"
+    className="urlpad"
+    href="#"
+    target="_blank"
+  >
+    test title
+  </a>
+  <a
+    aria-label="Redirect"
+    href="#"
+    target="_blank"
+  >
+    <span
+      className="glyph"
+    />
+  </a>
+</div>
+`;
+
+exports[`Shared components ListItem component should be rendered properly 1`] = `
+<div
+  className="active si-list-item"
+>
+  <div>
+    test
+  </div>
+</div>
+`;
+
+exports[`Shared components MessageBar component should be rendered properly 1`] = `
+<div
+  className="si-messages"
+>
+  <MessageBar
+    className=""
+    dismissButtonAriaLabel="Close"
+    isMultiline={true}
+    key="test"
+    messageBarType={1}
+    onDismiss={[Function]}
+  >
+    test message
+  </MessageBar>
+</div>
+`;
+
+exports[`Shared components Modal component should be rendered properly 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="si-modal-dialog"
+  closeTimeoutMS={0}
+  contentLabel="test title"
+  isOpen={true}
+  onRequestClose={[MockFunction]}
+  overlayClassName="si-modal-overlay"
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={true}
+  shouldFocusAfterRender={true}
+>
+  <div
+    className="si-modal-content"
+  >
+    <div
+      className="si-modal-header"
+    >
+      <div
+        className="si-modal-header-title"
+      >
+        test title
+      </div>
+      <a
+        className="si-close-panel-icon c-glyph glyph-clear"
+        href="javascript:void(0)"
+        onClick={[MockFunction]}
+      />
+    </div>
+    <div
+      className="si-modal-body"
+    >
+      <div>
+        test
+      </div>
+    </div>
+  </div>
+</Modal>
+`;
+
+exports[`Shared components Tab component should be rendered properly 1`] = `
+<a
+  aria-current={true}
+  className="si-tab c-select-button active"
+  href="javascript:void(0)"
+  onClick={[Function]}
+>
+  test label
+</a>
+`;
+
+exports[`Shared components TabNavigation component should be rendered properly 1`] = `
+<div
+  className="si-tab-navigation flex-column"
+>
+  <div
+    className="si-nav"
+  >
+    <div
+      className="c-group"
+      role="tablist"
+    >
+      <SITab
+        isActive={true}
+        key="test"
+        setViewer={[MockFunction]}
+        tab={
+          Object {
+            "id": "test",
+            "label": "test label",
+            "view": <div>
+              test
+            </div>,
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="si-tab-content flex-column"
+  >
+    <div>
+      test
+    </div>
+  </div>
+</div>
+`;
