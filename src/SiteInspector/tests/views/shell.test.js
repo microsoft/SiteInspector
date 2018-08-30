@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 import React from 'react';
 import configureStore from 'redux-mock-store';
 import { configure, shallow } from 'enzyme';

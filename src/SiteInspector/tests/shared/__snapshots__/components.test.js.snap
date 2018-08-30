@@ -2,7 +2,7 @@
 
 exports[`Shared components Blade component should be rendered properly 1`] = `
 <div
-  className="si-blade flex-column visible"
+  className="si-blade flex-column "
 >
   <div
     className="si-blade-header"
@@ -20,11 +20,7 @@ exports[`Shared components Blade component should be rendered properly 1`] = `
   </div>
   <div
     className="si-blade-content flex-column"
-  >
-    <div>
-      hello world
-    </div>
-  </div>
+  />
 </div>
 `;
 
@@ -54,7 +50,7 @@ exports[`Shared components Chip component should be rendered properly 1`] = `
 
 exports[`Shared components ListItem component should be rendered properly 1`] = `
 <div
-  className="active si-list-item"
+  className="si-list-item"
 >
   <div>
     test
@@ -86,7 +82,7 @@ exports[`Shared components Modal component should be rendered properly 1`] = `
   className="si-modal-dialog"
   closeTimeoutMS={0}
   contentLabel="test title"
-  isOpen={true}
+  isOpen={false}
   onRequestClose={[MockFunction]}
   overlayClassName="si-modal-overlay"
   parentSelector={[Function]}
@@ -124,8 +120,7 @@ exports[`Shared components Modal component should be rendered properly 1`] = `
 
 exports[`Shared components Tab component should be rendered properly 1`] = `
 <a
-  aria-current={true}
-  className="si-tab c-select-button active"
+  className="si-tab c-select-button "
   href="javascript:void(0)"
   onClick={[Function]}
 >
