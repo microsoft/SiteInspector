@@ -84,7 +84,7 @@ describe('Shared actions', () => {
     });
   });
 
-  it('addMessage should dispatch and return ADD_MESSAGE action', () => {
+  it('addMessage should dispatch and return ADD_MESSAGE action and set state', () => {
     const store = mockStore({ });
 
     store.dispatch(actions.addMessage(message));
@@ -95,6 +95,14 @@ describe('Shared actions', () => {
     expect(action.message.key).toBeTruthy();
     expect(action.message.type).toEqual(0);
     expect(action.message.text).toEqual(message);
+
+    const expectedState = {
+      ...defaultState,
+      messages: [
+        action.message,
+      ],
+    };
+    expect(SharedReducer(defaultState, action)).toEqual(expectedState);
   });
 
   it('addMessage should automatically collapse and remove itself', () => {
