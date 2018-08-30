@@ -2,7 +2,6 @@
 // Licensed under the MIT License.
 
 import reducer from '../../shared/reducer';
-import * as actions from '../../shared/actions';
 
 describe('Shared reducers', () => {
   const defaultState = {

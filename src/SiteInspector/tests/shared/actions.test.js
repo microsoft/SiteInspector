@@ -19,7 +19,7 @@ describe('Shared actions', () => {
   };
   const message = 'test message';
 
-  describe('should be able to collapse and remove messages', () =>{
+  describe('should be able to collapse and remove messages', () => {
     let messageKey;
     let messageState;
 
