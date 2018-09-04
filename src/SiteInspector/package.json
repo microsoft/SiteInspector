@@ -11,7 +11,9 @@
     "lint:fix": "eslint --ext .jsx --ext .js . --fix",
     "prebuild": "npm-run-all clean-dist",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
-    "start": "babel-node tools/devServer.js"
+    "start": "babel-node tools/devServer.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "author": "Microsoft",
   "license": "MIT",
@@ -28,7 +30,7 @@
     "raf-throttle": "^2.0.3",
     "react": "^16.2.0",
     "react-addons-test-utils": "^15.4.2",
-    "react-dom": "^16.2.0",
+    "react-dom": "^16.4.2",
     "react-modal": "^2.3.2",
     "react-redux": "^5.0.3",
     "react-router-dom": "^4.2.2",
@@ -42,16 +44,21 @@
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^7.1.1",
+    "babel-jest": "^23.4.2",
     "babel-loader": "^7.1.2",
     "babel-plugin-lodash": "^3.3.2",
     "babel-plugin-transform-class-properties": "^6.19.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-es2016": "^6.24.1",
-    "babel-preset-react": "^6.16.0",
+    "babel-preset-react": "^6.24.1",
     "browser-sync": "^2.24.4",
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
+    "enzyme": "^3.5.0",
+    "enzyme-adapter-react-16": "^1.3.0",
+    "enzyme-to-json": "^3.3.4",
     "eslint": "^3.14.0",
     "eslint-config-airbnb": "^14.0.0",
     "eslint-loader": "^1.6.1",
@@ -61,10 +68,12 @@
     "file-loader": "^0.10.0",
     "html-webpack-plugin": "^2.30.1",
     "imports-loader": "^0.8.0",
+    "jest": "^23.5.0",
     "node-sass": "^4.9.0",
     "npm-run-all": "^4.0.2",
-    "react-test-renderer": "^15.5.4",
+    "react-test-renderer": "^16.4.2",
     "redux-devtools-extension": "^2.13.2",
+    "redux-mock-store": "^1.5.3",
     "rimraf": "^2.6.1",
     "sass-loader": "^4.1.1",
     "source-map-loader": "^0.2.1",
@@ -78,5 +87,27 @@
   },
   "engines": {
     "node": "7.2.1"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      ".*": "./tests/preprocessor.js"
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "transformIgnorePatterns": [
+      "/node_modules/",
+      ".*.scss"
+    ],
+    "moduleNameMapper": {
+      "^-!babel-loader!svg-react-loader.*$": "<rootDir>/tests/importmock.js",
+      "^.*\\.scss$": "<rootDir>/tests/importmock.js"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx"
+    ]
   }
 }
