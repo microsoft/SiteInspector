@@ -1,20 +1,20 @@
-import { components as FluentDesign } from '@ms-fw/fw-react';
+import React from 'react';
 import Drawer from '../extensions/Drawer';
 import Pagination from '../extensions/Pagination';
 
 module.exports = {
-  ActionMenu: FluentDesign.ActionMenu,
-  Badge: FluentDesign.Badge,
-  CallToAction: FluentDesign.CallToAction,
+  ActionMenu: <div className="si-not-implemented" />,
+  Badge: <div className="si-not-implemented" />,
+  CallToAction: <div className="si-not-implemented" />,
   Drawer,
-  Flyout: FluentDesign.Flyout,
-  Label: FluentDesign.Label,
-  PageBar: FluentDesign.PageBar,
+  Flyout: <div className="si-not-implemented" />,
+  Label: <div className="si-not-implemented" />,
+  PageBar: <div className="si-not-implemented" />,
   Pagination,
-  Progress: FluentDesign.Progress,
-  Search: FluentDesign.Search,
-  Select: FluentDesign.Select,
-  Table: FluentDesign.Table,
-  Textarea: FluentDesign.Textarea,
-  TextField: FluentDesign.TextField,
+  Progress: <div className="si-not-implemented" />,
+  Search: <div className="si-not-implemented" />,
+  Select: <div className="si-not-implemented" />,
+  Table: <div className="si-not-implemented" />,
+  Textarea: <div className="si-not-implemented" />,
+  TextField: <div className="si-not-implemented" />,
 };

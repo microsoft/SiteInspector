@@ -98,7 +98,6 @@
     <Content Include="stylesheets\components\_tabnavigation.scss" />
     <Content Include="stylesheets\main.scss" />
     <Content Include="stylesheets\views\_shell.scss" />
-    <Content Include="stylesheets\_external.scss" />
     <Content Include="stylesheets\_fw_core_copy.scss" />
     <Content Include="stylesheets\_glyphicons.scss" />
     <Content Include="stylesheets\_variables.scss" />

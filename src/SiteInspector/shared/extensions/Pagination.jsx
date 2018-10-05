@@ -1,11 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { components as FluentDesign } from '@ms-fw/fw-react';
 
-class Pagination extends FluentDesign.Pagination {
-  constructor(props) {
-    super(props);
-
+class Pagination {
+  constructor() {
     this.determineItemsToRender = this.determineItemsToRender.bind(this);
     this.handleNextClickEvent = this.handleNextClickEvent.bind(this);
     this.handlePreviousClickEvent = this.handlePreviousClickEvent.bind(this);

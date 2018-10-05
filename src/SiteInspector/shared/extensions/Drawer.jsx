@@ -1,10 +1,7 @@
 import PropTypes from 'prop-types';
-import { components as FluentDesign } from '@ms-fw/fw-react';
 
-class Drawer extends FluentDesign.Drawer {
+class Drawer {
   constructor(props) {
-    super(props);
-
     const handleTriggerClick = this.handleTriggerClick;
     this.handleTriggerClick = function (e) {
       props.onToggle();
