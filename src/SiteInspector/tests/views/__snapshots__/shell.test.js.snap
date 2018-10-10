@@ -3,7 +3,6 @@
 exports[`Shell view tests SiteInspector rendered properly 1`] = `
 <Shell
   currentPath=""
-  messages={Array []}
   onToggleShell={[Function]}
   position="right"
   removeMessage={[Function]}

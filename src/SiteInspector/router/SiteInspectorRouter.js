@@ -10,8 +10,6 @@ import {
     Switch,
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import MessageBar from '../shared/components/MessageBar';
-import { areArraysEqual } from '../utils/SiteInspectorHelper';
 import routes from './routes';
 
 let previousHeight = '0px';
@@ -41,8 +39,7 @@ class ShellInspectorRouter extends React.Component {
     const result = nextProps.tabs !== this.props.tabs ||
       nextProps.initialPath !== this.props.initialPath ||
       this.state.maxHeight !== previousHeight ||
-      (nextProps.routesUpdated && nextProps.routesUpdated !== this.props.routesUpdated) ||
-      !areArraysEqual(nextProps.messages, this.props.messages);
+      (nextProps.routesUpdated && nextProps.routesUpdated !== this.props.routesUpdated);
 
     previousHeight = this.state.maxHeight;
 
@@ -69,7 +66,7 @@ class ShellInspectorRouter extends React.Component {
   }
 
   render() {
-    const { tabs, initialPath, setPath, messages, removeMessage } = this.props;
+    const { tabs, initialPath, setPath } = this.props;
     return (<Router>
       <div className="flex-column">
         <div id="siPanelTabs" className="panel-tabs">
@@ -90,7 +87,6 @@ class ShellInspectorRouter extends React.Component {
           </div>
         </div>
         <div className="panel-content" style={{ maxHeight: this.state.maxHeight }}>
-          <MessageBar messages={messages} removeMessage={removeMessage} />
           <Switch>
             {routes.map(route => (
               <Route
@@ -116,20 +112,8 @@ ShellInspectorRouter.propTypes = {
   tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
   initialPath: PropTypes.string.isRequired,
   setPath: PropTypes.func.isRequired,
-  messages: PropTypes.arrayOf(PropTypes.shape({
-    isCollapsing: PropTypes.bool,
-    key: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    type: PropTypes.number,
-    timeout: PropTypes.number,
-  })),
-  removeMessage: PropTypes.func.isRequired,
   resetRouteUpdate: PropTypes.func.isRequired,
   routesUpdated: PropTypes.bool.isRequired,
-};
-
-ShellInspectorRouter.defaultProps = {
-  messages: {},
 };
 
 export default ShellInspectorRouter;

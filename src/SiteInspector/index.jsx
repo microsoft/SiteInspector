@@ -13,7 +13,6 @@ import { initializeShell } from './store/configureShell';
 import * as SiteInspectorUI from './shared/SiteInspectorUI';
 import * as actions from './shared/actions';
 import { registerTab } from './views/Shell/actions';
-import Fluent from './shared/components/FluentWeb';
 import { getTabParameters } from './utils/SiteInspectorHelper';
 
 require('./stylesheets/main.scss');
@@ -59,7 +58,6 @@ if (!isNotSupportedIE) {
     },
     // Provided for dynamically loaded components to use
     actions,
-    Fluent,
     PropTypes,
     React,
     ReactDOM,
