@@ -31,7 +31,10 @@ export default () => {
               });
               store.dispatch(addXHRInterceptItem(this.httpInfo));
             }
-          } catch (e) { console.log(e); }
+          } catch (e) {
+            // eslint-disable-next-line
+            console.log(e);
+          }
         }
       }, false);
 

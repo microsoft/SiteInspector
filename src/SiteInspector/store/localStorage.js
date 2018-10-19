@@ -12,6 +12,7 @@ export const deleteState = () => {
   try {
     localStorage.removeItem(localStorageStateKey);
   } catch (err) {
+    // eslint-disable-next-line
     console.log(err);
   }
 };
@@ -48,6 +49,7 @@ export const saveState = (states, activeState) => {
     const serializedState = JSON.stringify(cachedState);
     localStorage.setItem(localStorageStateKey, serializedState);
   } catch (err) {
+    // eslint-disable-next-line
     console.log(err);
   }
 };

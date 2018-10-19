@@ -6,8 +6,9 @@ import { MessageBarType } from 'office-ui-fabric-react/lib/MessageBar';
 export const ADD_MESSAGE = 'ADD_MESSAGE';
 export const ADD_XHR_ITEM = 'ADD_XHR_ITEM';
 export const COLLAPSE_MESSAGE = 'COLLAPSE_MESSAGE';
-export const SET_INIT_FLAG = 'SET_INIT_FLAG';
 export const REMOVE_MESSAGE = 'REMOVE_MESSAGE';
+export const SET_INIT_FLAG = 'SET_INIT_FLAG';
+export const SET_SHARED_STATE_CONFIG_DATA = 'SET_SHARED_STATE_CONFIG_DATA';
 
 export function collapseMessage(messageKey) {
   return {
@@ -51,6 +52,13 @@ export function addMessage(message) {
       type: ADD_MESSAGE,
       message,
     });
+  };
+}
+
+export function setSharedStateConfigData(config) {
+  return {
+    type: SET_SHARED_STATE_CONFIG_DATA,
+    config,
   };
 }
 

@@ -33,5 +33,6 @@ export const resetRouteUpdate = () => ({
 });
 
 export const logSiteInspectorTabChange = function logSiteInspectorTabChange(view) {
+  // eslint-disable-next-line
   console.log(`Tab changed to: ${view}`);
 };
