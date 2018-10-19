@@ -22,7 +22,7 @@
     <OutputPath>.</OutputPath>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
-    <StartWebBrowser>false</StartWebBrowser>
+    <StartWebBrowser>False</StartWebBrowser>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -36,29 +36,24 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="router\SiteInspectorRouter.js" />
-    <Compile Include="shared\components\DatePicker.jsx" />
-    <Compile Include="shared\components\MessageBar.jsx" />
-    <Compile Include="shared\components\Modal.jsx" />
-    <Compile Include="shared\components\LineChart.jsx" />
     <Compile Include="shared\components\TabNavigation.jsx" />
-    <Compile Include="shared\components\TagList.jsx" />
     <Compile Include="shared\constants.js" />
-    <Compile Include="shared\extensions\Drawer.jsx" />
     <Compile Include="shared\reducer.js" />
     <Compile Include="shared\components\Blade.jsx" />
-    <Compile Include="shared\components\Chip.jsx" />
-    <Compile Include="shared\components\DataTable.jsx" />
-    <Compile Include="shared\components\FluentWeb.jsx" />
-    <Compile Include="shared\components\ListItem.jsx" />
-    <Compile Include="shared\components\RenderField.jsx" />
     <Compile Include="shared\components\Tab.jsx" />
     <Compile Include="shared\components\Spinner.jsx" />
     <Compile Include="shared\config.js" />
-    <Compile Include="shared\extensions\Pagination.jsx" />
     <Compile Include="shared\actions.js" />
     <Compile Include="shared\SiteInspectorUI.js" />
     <Compile Include="store\configureShell.js" />
     <Compile Include="store\configureStore.js" />
+    <Compile Include="tests\importmock.js" />
+    <Compile Include="tests\preprocessor.js" />
+    <Compile Include="tests\shared\actions.test.js" />
+    <Compile Include="tests\shared\components.test.js" />
+    <Compile Include="tests\shared\reducer.test.js" />
+    <Compile Include="tests\siteinspector.test.js" />
+    <Compile Include="tests\views\shell.test.js" />
     <Compile Include="tools\devServer.js" />
     <Compile Include="store\localStorage.js" />
     <Compile Include="store\reducers.js" />
@@ -85,22 +80,15 @@
     <Content Include="index.jsx" />
     <Content Include="package.json" />
     <Content Include="stylesheets\components\_blade.scss" />
-    <Content Include="stylesheets\components\_chip.scss" />
-    <Content Include="stylesheets\components\_datatable.scss" />
-    <Content Include="stylesheets\components\_datepicker.scss" />
-    <Content Include="stylesheets\components\_fluent.scss" />
-    <Content Include="stylesheets\components\_linechart.scss" />
-    <Content Include="stylesheets\components\_listitem.scss" />
-    <Content Include="stylesheets\components\_messagebar.scss" />
-    <Content Include="stylesheets\components\_modal.scss" />
     <Content Include="stylesheets\components\_shared.scss" />
     <Content Include="stylesheets\components\_spinner.scss" />
     <Content Include="stylesheets\components\_tabnavigation.scss" />
     <Content Include="stylesheets\main.scss" />
     <Content Include="stylesheets\views\_shell.scss" />
-    <Content Include="stylesheets\_fw_core_copy.scss" />
     <Content Include="stylesheets\_glyphicons.scss" />
     <Content Include="stylesheets\_variables.scss" />
+    <Content Include="tests\shared\__snapshots__\components.test.js.snap" />
+    <Content Include="tests\views\__snapshots__\shell.test.js.snap" />
     <Content Include="views\Shell\component.jsx" />
     <Content Include="views\Shell\component.jsx" />
   </ItemGroup>
@@ -112,6 +100,11 @@
     <Folder Include="router\" />
     <Folder Include="shared\extensions\" />
     <Folder Include="stylesheets\views\" />
+    <Folder Include="tests\" />
+    <Folder Include="tests\shared\" />
+    <Folder Include="tests\shared\__snapshots__\" />
+    <Folder Include="tests\views\" />
+    <Folder Include="tests\views\__snapshots__\" />
     <Folder Include="tools\" />
     <Folder Include="utils\" />
     <Folder Include="public\" />

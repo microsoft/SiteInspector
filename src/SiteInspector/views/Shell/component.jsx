@@ -3,7 +3,6 @@
 
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ActionMenu } from '../../shared/components/FluentWeb';
 import config from '../../shared/config';
 import SiteInspectorRouter from '../../router/SiteInspectorRouter';
 
@@ -16,30 +15,16 @@ const Logo = config.logo
     : require('-!babel-loader!svg-react-loader!../../assets/MSFTLogo.svg');
 
 const Shell = ({ siteInspectorInitialized, currentPath, position,
-    tabs, visible, onToggleShell, setCurrentPath,
-    setShellPanelPosition, resetRouteUpdate,
-    routesUpdated, messages, removeMessage }) => {
+    tabs, visible, onToggleShell, setCurrentPath, resetRouteUpdate,
+    routesUpdated }) => {
   const attachCustomToggle = () => {
     const elem = document.getElementById(config.toggleElementId);
     if (elem && elem.className.indexOf('si-attached') === -1) {
       elem.addEventListener('click', onToggleShell, false);
-            // prevent multiple events from attaching
+      // prevent multiple events from attaching
       elem.className += ' si-attached';
     }
     return elem !== null;
-  };
-
-  const getMenuItems = () => {
-    const items = [
-      {
-        onClick: () => { setShellPanelPosition(position === 'right' ? 'left' : 'right'); },
-        text: `Position ${position === 'right' ? 'Left' : 'Right'}`,
-      }];
-    items.push({
-      onClick: () => { window.open(config.aboutUrl); },
-      text: 'About',
-    });
-    return { items };
   };
 
   return (
@@ -67,10 +52,6 @@ const Shell = ({ siteInspectorInitialized, currentPath, position,
                 <div className="header-title">{config.title}</div>
               </div>
               <div className="si-header-right">
-                <ActionMenu
-                  actionTrigger={{ glyph: 'settings' }}
-                  menu={getMenuItems()}
-                />
                 <div title="Close StoreInspector" className="panel-glyph">
                   <span className="c-glyph glyph-cancel" aria-hidden="true" onClick={onToggleShell} />
                 </div>
@@ -83,8 +64,6 @@ const Shell = ({ siteInspectorInitialized, currentPath, position,
                 setPath={setCurrentPath}
                 routesUpdated={routesUpdated}
                 resetRouteUpdate={resetRouteUpdate}
-                messages={messages}
-                removeMessage={removeMessage}
               />
             </div>
           </div>
@@ -94,27 +73,14 @@ const Shell = ({ siteInspectorInitialized, currentPath, position,
 
 Shell.propTypes = {
   currentPath: PropTypes.string.isRequired,
-  messages: PropTypes.arrayOf(PropTypes.shape({
-    isCollapsing: PropTypes.bool,
-    key: PropTypes.string.isRequired,
-    text: PropTypes.string.isRequired,
-    type: PropTypes.number,
-    timeout: PropTypes.number,
-  })),
-  removeMessage: PropTypes.func.isRequired,
   position: PropTypes.string.isRequired,
   tabs: PropTypes.arrayOf(PropTypes.string).isRequired,
   visible: PropTypes.bool.isRequired,
   onToggleShell: PropTypes.func.isRequired,
   setCurrentPath: PropTypes.func.isRequired,
-  setShellPanelPosition: PropTypes.func.isRequired,
   siteInspectorInitialized: PropTypes.bool.isRequired,
   resetRouteUpdate: PropTypes.func.isRequired,
   routesUpdated: PropTypes.bool.isRequired,
-};
-
-Shell.defaultProps = {
-  messages: [],
 };
 
 export default Shell;
