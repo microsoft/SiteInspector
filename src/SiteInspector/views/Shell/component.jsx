@@ -49,7 +49,7 @@ const Shell = ({ siteInspectorInitialized, currentPath, position,
                                 : <Logo className="panel-icon" />
                             }
                 </a>
-                <div className="header-title">{config.title}</div>
+                <div className="si-header-title">{config.title}</div>
               </div>
               <div className="si-header-right">
                 <div title="Close StoreInspector" className="panel-glyph">

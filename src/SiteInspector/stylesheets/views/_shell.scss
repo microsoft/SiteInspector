@@ -83,6 +83,7 @@ $shell-tab-logo-size-denominator: 3.3;
         padding: 0px 12px;
         width: $header-height;
         height: $header-height;
+        box-sizing: border-box;
     }
 
     .panel-glyph {
@@ -116,9 +117,10 @@ $shell-tab-logo-size-denominator: 3.3;
             flex-wrap: wrap;
             flex: 1;
 
-            .header-title {
+            .si-header-title {
                 flex-shrink: 1;
                 margin: $header-margin;
+                line-height: 36px;
             }
 
             .si-user-account {
