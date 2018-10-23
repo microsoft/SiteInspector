@@ -52,8 +52,8 @@ const Shell = ({ siteInspectorInitialized, currentPath, position,
                 <div className="si-header-title">{config.title}</div>
               </div>
               <div className="si-header-right">
-                <div title="Close StoreInspector" className="panel-glyph">
-                  <span className="c-glyph glyph-cancel" aria-hidden="true" onClick={onToggleShell} />
+                <div title="Close StoreInspector" className="si-panel-glyph">
+                  <span className="si-glyph si-glyph-cancel" aria-hidden="true" onClick={onToggleShell} />
                 </div>
               </div>
             </div>

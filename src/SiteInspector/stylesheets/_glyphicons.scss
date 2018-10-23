@@ -4,7 +4,21 @@
 $font-icon-path: "../fonts/";
 
 @font-face {
-    font-family: 'FW-MDL2';
-    src: url($font-icon-path + "FWMDL2.eot");
-    src: url($font-icon-path + "FWMDL2.eot?#iefix") format("embedded-opentype"), url($font-icon-path + "FWMDL2.woff2") format("woff2"), url($font-icon-path + "FWMDL2.woff") format("woff"), url($font-icon-path + "FWMDL2.ttf") format("truetype"), url($font-icon-path + "FWMDL2.svg") format("svg");
+  font-family: 'FW-MDL2';
+  src: url($font-icon-path + "FWMDL2.eot");
+  src: url($font-icon-path + "FWMDL2.eot?#iefix") format("embedded-opentype"), url($font-icon-path + "FWMDL2.woff2") format("woff2"), url($font-icon-path + "FWMDL2.woff") format("woff"), url($font-icon-path + "FWMDL2.ttf") format("truetype"), url($font-icon-path + "FWMDL2.svg") format("svg");
+}
+
+.si-glyph {
+  text-decoration: none;
+
+  &:before,
+  &:after {
+    font-family: FW-MDL2;
+    display: inline-block;
+  }
+
+  &.si-glyph-cancel:before {
+    content: "\E711";
+  }
 }
