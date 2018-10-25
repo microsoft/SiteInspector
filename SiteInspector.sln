@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2272B43C-5E3
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SiteInspector", "src\SiteInspector\SiteInspector.njsproj", "{5C638762-8AF7-493C-BE51-F5DFD62606DF}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "CaptureTab", "src\CaptureTab\CaptureTab.njsproj", "{27C6D8AC-941E-4875-8900-12B8023F5336}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "CaptureTab", "src\Tabs\CaptureTab\CaptureTab.njsproj", "{27C6D8AC-941E-4875-8900-12B8023F5336}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
