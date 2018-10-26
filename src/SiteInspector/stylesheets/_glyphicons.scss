@@ -21,4 +21,8 @@ $font-icon-path: "../fonts/";
   &.si-glyph-cancel:before {
     content: "\E711";
   }
+
+  &.si-glyph-settings:before {
+    content: "\E713";
+  }
 }

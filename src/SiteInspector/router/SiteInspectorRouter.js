@@ -70,14 +70,14 @@ class ShellInspectorRouter extends React.Component {
     return (<Router>
       <div className="flex-column">
         <div id="siPanelTabs" className="panel-tabs">
-          <div className="c-group">
+          <div className="si-group">
             {tabs.map((tab) => {
               const route = routes.find(r => r.id.toUpperCase() === tab.toUpperCase());
               return route
                 ? <NavLink
                   key={tab}
                   exact
-                  className="si-tab-anchor c-select-button"
+                  className="si-tab-anchor si-select-button"
                   to={route.path}
                   activeClassName="active"
                   onClick={() => setPath(route.path)}

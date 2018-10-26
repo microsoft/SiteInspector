@@ -13,7 +13,7 @@ exports[`Shared components Blade component should be rendered properly 1`] = `
       test title
     </div>
     <a
-      className="si-close-panel-icon c-glyph glyph-clear"
+      className="si-close-panel-icon si-glyph glyph-clear"
       href="javascript:void(0)"
       onClick={[MockFunction]}
     />
@@ -26,7 +26,7 @@ exports[`Shared components Blade component should be rendered properly 1`] = `
 
 exports[`Shared components Tab component should be rendered properly 1`] = `
 <a
-  className="si-tab c-select-button "
+  className="si-tab si-select-button "
   href="javascript:void(0)"
   onClick={[Function]}
 >
@@ -42,7 +42,7 @@ exports[`Shared components TabNavigation component should be rendered properly 1
     className="si-nav"
   >
     <div
-      className="c-group"
+      className="si-group"
       role="tablist"
     >
       <SITab

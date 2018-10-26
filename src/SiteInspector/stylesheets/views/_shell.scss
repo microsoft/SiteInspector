@@ -133,12 +133,14 @@ $shell-tab-logo-size-denominator: 3.3;
             display: inline-flex;
         }
 
-        button.c-action-trigger {
+        button.si-action-trigger {
             color: black;
             margin-top: 0;
             height: $header-height;
+            min-width: $header-height;
+            padding: 11px 0;
 
-            &.glyph-settings {
+            .si-glyph-settings {
                 font-size: 26px;
                 padding: 0;
                 min-width: $header-height;
@@ -155,7 +157,7 @@ $shell-tab-logo-size-denominator: 3.3;
             }
         }
 
-        .c-context-menu {
+        .si-context-menu {
             font-size: 12px;
 
             > li span {
@@ -184,19 +186,19 @@ $shell-tab-logo-size-denominator: 3.3;
             transform: rotateX(180deg);
             flex-shrink: 1;
 
-            .c-group {
+            .si-group {
                 padding: 0 8px;
                 transform: rotateX(180deg);
             }
 
-            .c-select-button {
+            .si-select-button {
                 width: auto;
                 padding: 8px 24px;
                 border-radius: 2px 2px 0 0;
                 color: white;
             }
 
-            .c-select-button.active {
+            .si-select-button.active {
                 color: $panel-font-color;
                 background-color: $panel-background-color;
             }
