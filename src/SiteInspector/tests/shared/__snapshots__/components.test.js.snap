@@ -13,7 +13,7 @@ exports[`Shared components Blade component should be rendered properly 1`] = `
       test title
     </div>
     <a
-      className="si-close-panel-icon si-glyph glyph-clear"
+      className="si-close-panel-icon si-glyph si-glyph-clear"
       href="javascript:void(0)"
       onClick={[MockFunction]}
     />
