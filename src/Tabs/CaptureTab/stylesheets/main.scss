@@ -1,0 +1,31 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
+#site-inspector {
+  .capture-tab {
+    padding: 10px 20px;
+
+    .preview-container {
+      width: 100%;
+      height: 100%;
+      overflow-y: scroll;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .si-capture-control-buttons {
+      margin-bottom: 10px;
+
+      button, a {
+          font-size: 15px;
+          font-weight: 400;
+          margin-right: 10px;
+          height: 35px;
+      }
+
+    }
+  }
+}

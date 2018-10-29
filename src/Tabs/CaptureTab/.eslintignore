@@ -1,0 +1,4 @@
+dist/*
+public/*
+coverage/*
+utils/FileSaver.js
