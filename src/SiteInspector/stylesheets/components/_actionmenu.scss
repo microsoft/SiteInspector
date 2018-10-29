@@ -1,0 +1,68 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
+.si-action-menu {
+  button {
+    font-size: 15px;
+    max-width: 374px;
+    min-width: 36px;
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 0 8px;
+    color: #0069ba;
+    border: 1px solid transparent;
+    background: none;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    outline: 1px dashed transparent;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  ul.si-context-menu {
+    font-size: 12px;
+    position: absolute;
+    background: #f2f2f2;
+    width: 296px;
+    min-width: 64px;
+    max-width: 368px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    z-index: 500;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+    list-style: none;
+
+    & > .si-menu-item {
+      position: relative;
+      padding: 11px;
+      cursor: pointer;
+      outline: 0;
+      white-space: normal;
+      background: #f2f2f2;
+      background-clip: padding-box;
+
+      &:hover {
+        background: #d9d9d9;
+      }
+    }
+  }
+
+  & > button.si-action-trigger {
+    position: relative;
+    height: 100%;
+    border: 1px solid transparent;
+
+    &[aria-expanded=false] + ul {
+      display: none;
+    }
+
+    &[aria-expanded=true], {
+      background: rgba(0, 0, 0, .1);
+      color: #000;
+    }
+  }
+}

@@ -16,10 +16,8 @@ const TabNavigation = ({ tabs, activeTab, setTab }) => {
   return (
     <div className="si-tab-navigation flex-column">
       <div className="si-nav">
-        <div className="c-group" role="tablist">
-          {
-            Object.keys(tabs).map(makeTab)
-          }
+        <div className="si-group" role="tablist">
+          {Object.keys(tabs).map(makeTab)}
         </div>
       </div>
       <div className="si-tab-content flex-column">

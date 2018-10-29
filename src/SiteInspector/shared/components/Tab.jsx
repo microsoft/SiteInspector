@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 const SITab = ({ isActive, tab, setViewer }) => (
   <a
-    className={`si-tab c-select-button ${classNames({ active: isActive })}`}
+    className={`si-tab si-select-button ${classNames({ active: isActive })}`}
     aria-current={isActive}
     href="javascript:void(0)" onClick={() => setViewer(tab.id)}
   >{tab.label}</a>);

@@ -5,6 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import config from '../../shared/config';
 import SiteInspectorRouter from '../../router/SiteInspectorRouter';
+import ActionMenu from '../../shared/components/ActionMenu';
 
 // eslint-disable-next-line
 const SITab = require('-!babel-loader!svg-react-loader!../../assets/SITab.svg');
@@ -15,8 +16,8 @@ const Logo = config.logo
     : require('-!babel-loader!svg-react-loader!../../assets/MSFTLogo.svg');
 
 const Shell = ({ siteInspectorInitialized, currentPath, position,
-    tabs, visible, onToggleShell, setCurrentPath, resetRouteUpdate,
-    routesUpdated }) => {
+    tabs, visible, onToggleShell, setCurrentPath, setShellPanelPosition,
+    resetRouteUpdate, routesUpdated }) => {
   const attachCustomToggle = () => {
     const elem = document.getElementById(config.toggleElementId);
     if (elem && elem.className.indexOf('si-attached') === -1) {
@@ -34,9 +35,9 @@ const Shell = ({ siteInspectorInitialized, currentPath, position,
             <a className="shell-client-tab" onClick={onToggleShell} href="javascript:void(0)">
               <SITab className="shell-icon-glass" />
               {typeof Logo === 'string'
-                          ? <img className="shell-icon" src={Logo} alt="Product logo" />
-                          : <Logo className="shell-icon" />
-                      }
+                ? <img className="shell-icon" src={Logo} alt="Product logo" />
+                : <Logo className="shell-icon" />
+              }
             </a>
           </div>
           }
@@ -45,15 +46,27 @@ const Shell = ({ siteInspectorInitialized, currentPath, position,
               <div className="si-header-left">
                 <a href={config.aboutUrl} target="_blank" rel="noopener noreferrer">
                   {typeof Logo === 'string'
-                                ? <img className="panel-icon normal" src={Logo} alt="Product logo" />
-                                : <Logo className="panel-icon" />
-                            }
+                    ? <img className="panel-icon normal" src={Logo} alt="Product logo" />
+                    : <Logo className="panel-icon" />
+                  }
                 </a>
-                <div className="header-title">{config.title}</div>
+                <div className="si-header-title">{config.title}</div>
               </div>
               <div className="si-header-right">
-                <div title="Close StoreInspector" className="panel-glyph">
-                  <span className="c-glyph glyph-cancel" aria-hidden="true" onClick={onToggleShell} />
+                <ActionMenu
+                  actionTrigger={(<span className="si-glyph si-glyph-settings" />)}
+                  menu={[{
+                    content: `Position ${position === 'right' ? 'Left' : 'Right'}`,
+                    onClick: () => { setShellPanelPosition(position === 'right' ? 'left' : 'right'); },
+                    id: 'siMenuPosition',
+                  }, {
+                    content: 'About',
+                    onClick: () => { window.open(config.aboutUrl); },
+                    id: 'siMenuAbout',
+                  }]}
+                />
+                <div title="Close StoreInspector" className="si-panel-glyph">
+                  <span className="si-glyph si-glyph-cancel" aria-hidden="true" onClick={onToggleShell} />
                 </div>
               </div>
             </div>
@@ -78,6 +91,7 @@ Shell.propTypes = {
   visible: PropTypes.bool.isRequired,
   onToggleShell: PropTypes.func.isRequired,
   setCurrentPath: PropTypes.func.isRequired,
+  setShellPanelPosition: PropTypes.func.isRequired,
   siteInspectorInitialized: PropTypes.bool.isRequired,
   resetRouteUpdate: PropTypes.func.isRequired,
   routesUpdated: PropTypes.bool.isRequired,

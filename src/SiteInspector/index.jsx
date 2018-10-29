@@ -76,5 +76,6 @@ if (!isNotSupportedIE) {
   window.siteInspector = {
     init() { },
   };
+  // eslint-disable-next-line
   console.log('SiteInspector is not supported on this version of IE (only IE 11 is supported).');
 }
