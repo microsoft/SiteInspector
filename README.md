@@ -11,7 +11,19 @@ information to help you manage and maintain your site.</td>
   </tr>  
 </table>
 
+# Getting started
 
+To try out this example, clone the project and install [npm](https://github.com/npm/cli) if you don't have it already.
+
+
+```sh
+npm install
+npm start
+```
+
+This will launch a test server (http://localhost:3000) with an example of the SiteInspector.JS shell embedded in the page. The small Microsoft logo tab on the left of the page can be clicked to slide out the blade framework as shown on the right.
+
+<img src="https://redir.blob.core.windows.net/assets/GitHubSICapture.PNG">
 
 # Contributing
 
