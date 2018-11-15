@@ -31,7 +31,6 @@ const mapDispatchToProps = dispatch => ({
     dispatch(resetRouteUpdate());
   },
   setCurrentPath: (path) => {
-    // dispatch(logSiteInspectorTabChange(path));
     dispatch(setCurrentPath(path));
   },
   setShellPanelPosition: (position) => {
