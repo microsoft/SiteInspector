@@ -1,7 +1,7 @@
 {
   "name": "site-inspector-capture-tab",
   "version": "1.0.0",
-  "description": "",
+  "description": "A sample Site Inspector tab that captures screenshots of web sites.",
   "main": "index.jsx",
   "scripts": {
     "dev": "webpack -d --watch",
@@ -10,8 +10,8 @@
     "lint": "eslint --ext .jsx --ext .js .",
     "lint:fix": "eslint --ext .jsx --ext .js . --fix"
   },
-  "author": "ryrife",
-  "license": "ISC",
+  "author": "Microsoft",
+  "license": "MIT",
   "dependencies": {
     "html2canvas": "^1.0.0-alpha.12",
     "isomorphic-fetch": "^2.2.1",

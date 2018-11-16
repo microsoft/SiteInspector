@@ -187,8 +187,10 @@ $shell-tab-logo-size-denominator: 3.3;
             flex-shrink: 1;
 
             .si-group {
+                display: flex;
                 padding: 0 8px;
                 transform: rotateX(180deg);
+                padding-top: 5px;
             }
 
             .si-select-button {
@@ -196,6 +198,7 @@ $shell-tab-logo-size-denominator: 3.3;
                 padding: 8px 24px;
                 border-radius: 2px 2px 0 0;
                 color: white;
+                text-decoration: none;
             }
 
             .si-select-button.active {

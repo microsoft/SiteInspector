@@ -7,7 +7,6 @@ import { toggleShell,
   setShellPanelPosition,
   setCurrentPath,
   resetRouteUpdate,
-  logSiteInspectorTabChange,
 } from './actions';
 import { removeMessage } from '../../shared/actions';
 
@@ -32,7 +31,6 @@ const mapDispatchToProps = dispatch => ({
     dispatch(resetRouteUpdate());
   },
   setCurrentPath: (path) => {
-    dispatch(logSiteInspectorTabChange(path));
     dispatch(setCurrentPath(path));
   },
   setShellPanelPosition: (position) => {

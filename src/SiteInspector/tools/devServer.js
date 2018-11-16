@@ -32,10 +32,12 @@ import browserSync from 'browser-sync';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
-import config from '../webpack.dev';
+import devConfig from '../webpack.dev';
+import demoConfig from '../webpack.demo';
+
+const config = process.argv && process.argv.indexOf('demo') !== -1 ? demoConfig : devConfig;
 
 const bundler = webpack(config);
-
 // Run Browsersync and use middleware for Hot Module Replacement
 browserSync({
   port: 3000,

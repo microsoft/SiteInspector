@@ -27,8 +27,10 @@ export function injectAsyncReducer(storeToInject, asyncReducer) {
   storeToInject.replaceReducer(createMainReducer(storeToInject.asyncReducers));
 }
 
-store.subscribe(throttle(() => {
-  saveState(store.getState(), store.getState().ShellState.activeState);
-}, 1000));
+if (process.env.NODE_ENV === 'production') {
+  store.subscribe(throttle(() => {
+    saveState(store.getState(), store.getState().ShellState.activeState);
+  }, 1000));
+}
 
 export default store;
