@@ -1,0 +1,14 @@
+{
+  "name": "site-inspector-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "demo-install": "npm --prefix ./src/Tabs/CaptureTab install ./src/Tabs/CaptureTab && npm --prefix ./src/SiteInspector install ./src/SiteInspector",
+    "demo": "npm run demo-install && npm run demo-start",
+    "demo-start": "npm --prefix ./src/Tabs/CaptureTab run build && npm --prefix ./src/SiteInspector/ run start demo"
+  },
+  "author": "Microsoft",
+  "license": "MIT",
+  "engines": {
+    "node": "7.2.1"
+  }
+}

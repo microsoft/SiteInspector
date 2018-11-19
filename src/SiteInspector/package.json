@@ -12,7 +12,6 @@
     "prebuild": "npm-run-all clean-dist",
     "remove-dist": "node_modules/.bin/rimraf ./dist",
     "start": "babel-node tools/devServer.js",
-    "demo": "npm --prefix ../Tabs/CaptureTab install&&npm --prefix ../Tabs/CaptureTab run build&&npm install&&babel-node tools/devServer.js demo",
     "test": "jest",
     "test:watch": "jest --watch"
   },

@@ -63,6 +63,7 @@
     <Compile Include="views\Shell\container.js" />
     <Compile Include="views\Shell\reducer.js" />
     <Compile Include="webpack.common.js" />
+    <Compile Include="webpack.demo.js" />
     <Compile Include="webpack.dev.js" />
     <Compile Include="webpack.config.js" />
     <Content Include=".babelrc" />
