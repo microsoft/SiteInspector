@@ -1,6 +1,82 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Shell view tests SiteInspector rendered properly 1`] = `
+exports[`Primary container view tests Shell component tests Panel is rendered 1`] = `
+<div
+  className="panel flex-column  right"
+>
+  <div
+    className="header"
+    id="siHeader"
+  >
+    <div
+      className="si-header-left"
+    >
+      <a
+        href="https://github.com/Microsoft/SiteInspector/blob/master/README.md"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <[object Object]
+          className="panel-icon"
+        />
+      </a>
+      <div
+        className="si-header-title"
+      >
+        SI Test
+      </div>
+    </div>
+    <div
+      className="si-header-right"
+    >
+      <ActionMenu
+        actionTrigger={
+          <span
+            className="si-glyph si-glyph-settings"
+          />
+        }
+        menu={
+          Array [
+            Object {
+              "content": "Position Left",
+              "id": "siMenuPosition",
+              "onClick": [Function],
+            },
+            Object {
+              "content": "About",
+              "id": "siMenuAbout",
+              "onClick": [Function],
+            },
+          ]
+        }
+      />
+      <div
+        className="si-panel-glyph"
+        title="Close StoreInspector"
+      >
+        <span
+          aria-hidden="true"
+          className="si-glyph si-glyph-cancel"
+          onClick={[Function]}
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="panel-content-wrapper flex-column"
+  >
+    <ShellInspectorRouter
+      initialPath=""
+      resetRouteUpdate={[Function]}
+      routesUpdated={false}
+      setPath={[Function]}
+      tabs={Array []}
+    />
+  </div>
+</div>
+`;
+
+exports[`Primary container view tests SiteInspector rendered properly 1`] = `
 <Shell
   currentPath=""
   onToggleShell={[Function]}
