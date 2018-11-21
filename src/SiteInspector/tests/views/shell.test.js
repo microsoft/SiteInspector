@@ -97,6 +97,6 @@ describe('Primary container view tests', () => {
       const title = panel.find('.si-header-title');
       expect(title.length).toEqual(1);
       expect(title.text()).toEqual('SI Test');
-    })
+    });
   });
 });
