@@ -17,8 +17,12 @@
   <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
   <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
   <ItemGroup>
+    <Content Include=".babelrc" />
+    <Content Include=".eslintignore" />
+    <Content Include=".eslintrc" />
     <Content Include=".npmrc" />
     <Content Include="package.json" />
+    <Content Include="stylesheets\main.scss" />
     <Content Include="webpack.config.js" />
     <Content Include="index.jsx" />
     <Content Include="shared\config.js" />
