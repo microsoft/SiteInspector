@@ -8,10 +8,9 @@ class DynamicTabViewer extends React.Component {
     // Service calls to set the data for the view
   }
 
-  componentWillUpdate(nextProps) {
+  componentWillUpdate() {
     // Services calls required when any of the views attributes change
   }
-
 
   render() {
     return (

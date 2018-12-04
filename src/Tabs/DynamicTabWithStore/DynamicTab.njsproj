@@ -21,6 +21,7 @@
     <Content Include=".eslintignore" />
     <Content Include=".eslintrc" />
     <Content Include=".gitignore" />
+    <Content Include=".npmrc" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="stylesheets\main.scss" />
