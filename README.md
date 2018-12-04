@@ -17,8 +17,7 @@ To try out this example, clone the project and install [npm](https://github.com/
 
 
 ```sh
-npm run demo-install
-npm run demo-start
+npm run demo
 ```
 
 This will launch a test server (http://localhost:3000) with an example of the SiteInspector.JS shell embedded in the page. The small Microsoft logo tab on the left of the page can be clicked to slide out the blade framework as shown on the right.
