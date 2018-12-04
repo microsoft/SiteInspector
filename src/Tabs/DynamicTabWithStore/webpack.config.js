@@ -1,6 +1,3 @@
-// Copyright (c) Microsoft Corporation. All rights reserved.
-// Licensed under the MIT License.
-
 const webpack = require('webpack');
 const path = require('path');
 
@@ -11,7 +8,7 @@ const webConfig = {
   entry: `${APP_DIR}/index.jsx`,
   output: {
     path: BUILD_DIR,
-    filename: 'captureTab.js',
+    filename: 'dynamicTab.js',
   },
   resolve: {
     extensions: ['.js', '.jsx'],

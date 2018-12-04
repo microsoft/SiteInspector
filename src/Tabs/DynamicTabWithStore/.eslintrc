@@ -24,7 +24,7 @@
         "site-inspector-ui",
         "site-inspector-actions"
       ]}
-    ]
+    ],
   },
   "env": {
     "browser": true,

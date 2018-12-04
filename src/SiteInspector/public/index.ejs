@@ -13,12 +13,17 @@
   <script>
     document.addEventListener("DOMContentLoaded", function(event) {
       window.siteInspector.init({
-        title: 'SiteInspectorTEST.js',
+        title: 'SiteInspector.js',
         tabs: [
           {
             title: 'Capture',
             id: 'capture',
             location: '/tabs/captureTab.js',
+          },
+          {
+            title: 'Dynamic Tab',
+            id: 'dynamictab',
+            location: '/tabs/dynamicTab.js',
           }
         ],
       });
