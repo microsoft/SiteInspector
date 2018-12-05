@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "demo": "run-s demo-install demo-start",
-    "demo-install": "npm --prefix ./src/Tabs/CaptureTab install ./src/Tabs/CaptureTab && npm --prefix ./src/Tabs/DynamicTabWithStore install ./src/Tabs/DynamicTabWithStore && npm --prefix ./src/SiteInspector install ./src/SiteInspector",
+    "demo-install": "node install.js",
     "demo-start": "npm --prefix ./src/Tabs/CaptureTab run build && npm --prefix ./src/Tabs/DynamicTabWithStore run build && npm --prefix ./src/SiteInspector/ run start demo"
   },
   "author": "Microsoft",
