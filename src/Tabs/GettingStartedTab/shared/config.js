@@ -4,9 +4,9 @@
 import assignIn from 'lodash.assignin';
 
 const config = {
-  defaultTitle: 'DynamicTab',
-  id: 'dynamictab',
-  stateNamespace: 'DynamicTabState',
+  defaultTitle: 'My First Tab',
+  id: 'gettingstartedtab',
+  stateNamespace: 'CustomTabState',
 };
 
 // This is used to pass parameters to the tab from the parent config object.

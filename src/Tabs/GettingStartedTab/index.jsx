@@ -2,8 +2,8 @@
 // Licensed under the MIT License.
 
 import config from './shared/config';
-import DynamicTabContainer from './views/container';
-import DynamicTabReducer from './views/reducer';
+import CustomTabContainer from './views/container';
+import CustomTabReducer from './views/reducer';
 
 require('./stylesheets/main.scss');
 
@@ -11,8 +11,8 @@ window.siteInspector.registerCustomTab({
   id: config.id,
   label: config.defaultTitle,
   stateNamespace: config.stateNamespace,
-  component: DynamicTabContainer,
+  component: CustomTabContainer,
   reducerMap: {
-    [config.stateNamespace]: DynamicTabReducer,
+    [config.stateNamespace]: CustomTabReducer,
   },
 });

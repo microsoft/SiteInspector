@@ -3,11 +3,11 @@
 
 const initialState = [];
 
-const DynamicTabReducer = (state = initialState, action) => {
+const CustomTabReducer = (state = initialState, action) => {
   switch (action.type) {
     default:
       return state;
   }
 };
 
-export default DynamicTabReducer;
+export default CustomTabReducer;
