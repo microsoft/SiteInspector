@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation. All rights reserved.
+// Licensed under the MIT License.
+
 const { execSync } = require('child_process');
 const { readdirSync, statSync, unlinkSync } = require('fs');
 const { join } = require('path');
