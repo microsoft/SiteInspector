@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "demo": "run-s demo-install demo-start",
-    "demo-install": "npm --prefix ./src/Tabs/CaptureTab install ./src/Tabs/CaptureTab && npm --prefix ./src/Tabs/DynamicTabWithStore install ./src/Tabs/DynamicTabWithStore && npm --prefix ./src/SiteInspector install ./src/SiteInspector",
-    "demo-start": "npm --prefix ./src/Tabs/CaptureTab run build && npm --prefix ./src/Tabs/DynamicTabWithStore run build && npm --prefix ./src/SiteInspector/ run start demo"
+    "demo-install": "npm --prefix ./src/Tabs/CaptureTab install ./src/Tabs/CaptureTab && npm --prefix ./src/Tabs/GettingStartedTab install ./src/Tabs/GettingStartedTab && npm --prefix ./src/SiteInspector install ./src/SiteInspector",
+    "demo-start": "npm --prefix ./src/Tabs/CaptureTab run build && npm --prefix ./src/Tabs/GettingStartedTab run build && npm --prefix ./src/SiteInspector/ run start demo"
   },
   "author": "Microsoft",
   "license": "MIT",

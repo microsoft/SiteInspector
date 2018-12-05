@@ -1,7 +1,7 @@
 {
-  "name": "site-inspector-dynamic-tab-sdk",
+  "name": "site-inspector-getting-started-tab",
   "version": "1.0.0",
-  "description": "A template tab to create a dynamic tab that plugs into the SiteInspector blade project and which has access to single redux store of the blade.",
+  "description": "A template to get your started with creating a tab that plugs into the SiteInspector blade.",
   "main": "index.jsx",
   "scripts": {
     "dev": "webpack -d --watch",

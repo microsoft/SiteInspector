@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-class DynamicTabViewer extends React.Component {
+class CustomTabViewer extends React.Component {
   componentDidMount() {
     // Service calls to set the data for the view
   }
@@ -14,7 +14,7 @@ class DynamicTabViewer extends React.Component {
 
   render() {
     return (
-      <div>
+        <div id="customTab">
         <span>This is a dynamic tab.</span>
       </div>);
   }
@@ -24,4 +24,4 @@ class DynamicTabViewer extends React.Component {
 
 // Default prop types
 
-export default DynamicTabViewer;
+export default CustomTabViewer;
