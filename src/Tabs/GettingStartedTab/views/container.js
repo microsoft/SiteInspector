@@ -4,6 +4,7 @@
 import { connect } from 'react-redux';
 import CustomTabViewer from './component';
 
+// eslint-disable-next-line
 const mapStateToProps = (state) => ({
     // Access redux state here
     // To access shared state:
@@ -14,6 +15,7 @@ const mapStateToProps = (state) => ({
     //   propertyName: state[config.stateNamespace].propertyName
 });
 
+// eslint-disable-next-line
 const mapDispatchToProps = (dispatch) => ({
     // Write dispatch actions here
 });

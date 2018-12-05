@@ -11,8 +11,8 @@ window.siteInspector.registerCustomTab({
   id: config.id,
   label: config.defaultTitle,
   stateNamespace: config.stateNamespace,
-  component: customTabContainer,
+  component: CustomTabContainer,
   reducerMap: {
-    [config.stateNamespace]: customTabReducer,
+    [config.stateNamespace]: CustomTabReducer,
   },
 });
