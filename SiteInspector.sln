@@ -12,7 +12,7 @@ Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "SiteInspector", "src\SiteIn
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "CaptureTab", "src\Tabs\CaptureTab\CaptureTab.njsproj", "{27C6D8AC-941E-4875-8900-12B8023F5336}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "GettingStartedTab", "src\Tabs\DynamicTabWithStore\GettingStartedTab.njsproj", "{0CCA3B41-64AA-48B1-B29C-7BB721EE3B05}"
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "GettingStartedTab", "src\Tabs\GettingStartedTab\GettingStartedTab.njsproj", "{0CCA3B41-64AA-48B1-B29C-7BB721EE3B05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

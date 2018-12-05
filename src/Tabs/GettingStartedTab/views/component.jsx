@@ -15,7 +15,7 @@ class CustomTabViewer extends React.Component {
   render() {
     return (
         <div id="customTab">
-        <span>This is a dynamic tab.</span>
+        <span>This is a custom tab.</span>
       </div>);
   }
 }
