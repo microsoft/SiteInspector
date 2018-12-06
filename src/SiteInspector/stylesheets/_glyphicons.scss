@@ -25,4 +25,12 @@ $font-icon-path: "../fonts/";
   &.si-glyph-settings:before {
     content: "\E713";
   }
+  
+  &.si-glyph-chevron-left:before {
+    content: "\E76B";
+  }
+
+  &.si-glyph-chevron-right:before {
+    content: "\E76C";
+  }  
 }

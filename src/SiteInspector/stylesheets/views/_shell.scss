@@ -41,7 +41,7 @@ $shell-tab-logo-size-denominator: 3.3;
   }
 
   .shadow{
-    -webkit-filter: drop-shadow(3px 3px 3px #777); 
+    -webkit-filter: drop-shadow(3px 3px 3px #777);
     filter: drop-shadow(3px 3px 3px #777);
   }
 
@@ -179,18 +179,32 @@ $shell-tab-logo-size-denominator: 3.3;
         width: 100%;
         background: $panel-background-color;
 
+        #siPanelTabs.with-scroll {
+          padding-right: 34px;
+        }
+
         .panel-tabs, .si-nav {
-            overflow-x: auto;
+            position: relative;
+            overflow-x: hidden;
             white-space: nowrap;
             background-color: $tab-container-background-color;
-            transform: rotateX(180deg);
             flex-shrink: 1;
 
             .si-group {
+                &.with-scroll-left {
+                  padding-left: 34px;
+                }
+
+                position: relative;
                 display: flex;
+                left: 0px;
                 padding: 0 8px;
-                transform: rotateX(180deg);
                 padding-top: 5px;
+                -webkit-transition: all .5s ease;
+                -moz-transition: all .5s ease;
+                -o-transition: all .5s ease;
+                -ms-transition: all .5s ease;
+                transition: all .5s ease;
             }
 
             .si-select-button {
@@ -204,6 +218,30 @@ $shell-tab-logo-size-denominator: 3.3;
             .si-select-button.active {
                 color: $panel-font-color;
                 background-color: $panel-background-color;
+            }
+
+            .panel-tabs-scroller {
+              position: absolute;
+              padding: 10px 5px;
+              background-color: #000;
+              color:rgb(230, 230, 230);
+              bottom: 0;
+            }
+
+            .right-scroller {
+              right: 0;
+
+              &:before {
+                padding-top: 5px;
+              }
+            }
+
+            .left-scroller {
+              left: 0;
+
+              &:before {
+                padding-top: 5px;
+              }
             }
         }
 
