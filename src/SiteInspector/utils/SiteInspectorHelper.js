@@ -38,9 +38,9 @@ export const areArraysEqual = (array1, array2) => {
 };
 
 export function getConfigTabTitle(tabId) {
-    if (config.tabs && config.tabs.length) {
-        const targetTabs = config.tabs.filter(tab => tab.id === tabId);
-        return targetTabs.length ? targetTabs[0].title : '';
-    }
-    return '';
+  if (config.tabs && config.tabs.length) {
+    const targetTabs = config.tabs.filter(tab => tab.id === tabId);
+    return targetTabs.length ? targetTabs[0].title : '';
+  }
+  return '';
 }
