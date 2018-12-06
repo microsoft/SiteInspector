@@ -28,6 +28,7 @@ chrome-user-data
 *.iml
 .vscode
 dist
+Tabs/dist
 *.suo
 *.user
 *.userosscache
