@@ -77,7 +77,7 @@ class CaptureViewer extends React.Component {
           {this.props.preview &&
             <button onClick={() => this.saveImage()}>Save Screenshot</button>}
         </div>
-        {this.state.isLoading && <Spinner label="Just a sec, your screenshot is almost ready" />}
+        {this.state.isLoading && <Spinner label="Setting up screenshot" />}
         {this.props.preview && imageUrl && <div className="preview-container">
           <img src={imageUrl} className="capture-preview" alt="Screenshot Preview" />
         </div>}
