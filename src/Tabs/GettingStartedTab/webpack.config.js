@@ -8,7 +8,7 @@ const webConfig = {
   entry: `${APP_DIR}/index.jsx`,
   output: {
     path: BUILD_DIR,
-    filename: 'dynamicTab.js',
+    filename: 'gettingStartedTab.js',
   },
   resolve: {
     extensions: ['.js', '.jsx'],
