@@ -1,10 +1,20 @@
 // Copyright (c) Microsoft Corporation. All rights reserved.
 // Licensed under the MIT License.
 
+const { sync } = require('rimraf');
 const { execSync } = require('child_process');
-const { readdirSync, statSync, unlinkSync } = require('fs');
+const {
+  readdirSync,
+  statSync,
+  renameSync,
+  existsSync,
+  mkdirSync,
+  readFileSync,
+  writeFileSync,
+} = require('fs');
 const { join } = require('path');
 
+const binDirectoryLocation = 'node_modules/.bin';
 const tabsRoot = 'src/Tabs/';
 const siteInspectorClientDirectory = 'src/SiteInspector';
 
@@ -41,10 +51,32 @@ installDirectories.forEach((directory) => {
     console.log(ex);
   }
 
-  console.log('Removing npm --prefix files');
+  console.log('Moving dependency executables to bin');
+  
+  const binDirectory = join(directory, binDirectoryLocation);
+
+  if (!existsSync(binDirectory)){
+    mkdirSync(binDirectory);
+  }
 
   readdirSync(directory)
     .filter(file =>
       !statSync(join(directory, file)).isDirectory() && !existingFiles.includes(file))
-    .forEach(file => unlinkSync(join(directory, file)));
+    .forEach((file) => {
+      const source = join(directory, file);
+      const target = join(binDirectory, file);
+
+      if (existsSync(target)){
+        sync(target);
+      }
+
+      const content = readFileSync(source);
+      const toWrite = content.toString()
+        .replace(/node_modules\\/g, '..\\')
+        .replace(/node_modules\//g, '../');
+
+      writeFileSync(source, toWrite);
+
+      renameSync(source, target);
+    });
 });
