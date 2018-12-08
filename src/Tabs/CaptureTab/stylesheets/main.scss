@@ -20,12 +20,29 @@
       margin-bottom: 10px;
 
       button, a {
-          font-size: 15px;
-          font-weight: 400;
-          margin-right: 10px;
-          height: 35px;
+        font-size: 15px;
+        font-weight: 400;
+        margin-right: 10px;
+        height: 35px;
       }
 
+      button {
+        color: #FFF;
+        background: #0069ba;
+        padding: 9px 12px 10px;
+        border-radius: 0;
+        border: solid 1px transparent;
+        transition: all 0.2s ease-in-out;
+
+        &:hover, &:focus {
+          background: #005fa7;
+          cursor: pointer;
+        }
+
+        &:focus {
+          outline: 2px solid #000;
+        }
+      }
     }
   }
 }
