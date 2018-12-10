@@ -19,5 +19,3 @@ You would want to make the below changes,at the very least, to convert this temp
 Please fix any lint errors not addressed by lint:fix. 
 4. Execute "npm run build" to create a unminifed compiled version of your tab. This will be located in the ../dist folder.
 5. You can then copy over the compiled js file from the ../dist folder to any storage of your choosing. The config file of the parent application is going to access the tab from this storage location.
-## Help
-For any help with this template, reach out to siteinspector@microsoft.com
