@@ -10,6 +10,7 @@ import {
 } from './actions';
 import routes from '../../router/routes';
 import config from '../../shared/config';
+import { getConfigTabTitle } from '../../utils/SiteInspectorHelper';
 
 export const initialState = {
   currentPath: '',
@@ -56,7 +57,7 @@ const ShellReducer = (state = initialState, action) => {
         } else {
           routes.push({
             id: action.tab.id,
-            label: action.tab.label,
+            label: getConfigTabTitle(action.tab.id) || action.tab.label,
             path: `/${action.tab.id.toLowerCase()}`,
             component: action.tab.component,
             state: (action.tab.reducerMap &&
