@@ -81,6 +81,7 @@
     <Content Include="fonts\FWMDL2.woff2" />
     <Content Include="index.jsx" />
     <Content Include="package.json" />
+    <Content Include="public\index.ejs" />
     <Content Include="stylesheets\components\_blade.scss" />
     <Content Include="stylesheets\components\_shared.scss" />
     <Content Include="stylesheets\components\_spinner.scss" />

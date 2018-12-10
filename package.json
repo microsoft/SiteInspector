@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "scripts": {
     "demo": "run-s demo-install demo-start",
-    "demo-install": "npm --prefix ./src/Tabs/CaptureTab install ./src/Tabs/CaptureTab && npm --prefix ./src/Tabs/DynamicTabWithStore install ./src/Tabs/DynamicTabWithStore && npm --prefix ./src/SiteInspector install ./src/SiteInspector",
-    "demo-start": "npm --prefix ./src/Tabs/CaptureTab run build && npm --prefix ./src/Tabs/DynamicTabWithStore run build && npm --prefix ./src/SiteInspector/ run start demo"
+    "demo-install": "node install.js",
+    "demo-start": "npm --prefix ./src/Tabs/CaptureTab run build && npm --prefix ./src/Tabs/GettingStartedTab run build && npm --prefix ./src/SiteInspector/ run start demo"
   },
   "author": "Microsoft",
   "license": "MIT",
   "devDependencies": {
-    "npm-run-all": "^4.1.5"
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^2.6.2"
   },
   "engines": {
     "node": "7.2.1"

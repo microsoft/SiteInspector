@@ -73,11 +73,11 @@ class CaptureViewer extends React.Component {
     return (
       <div className="flex-display-column capture-tab">
         <div className="si-capture-control-buttons">
-          <button className="c-button o-primary" onClick={() => this.captureClick()}>Capture Screenshot</button>
+          <button onClick={() => this.captureClick()}>Capture Screenshot</button>
           {this.props.preview &&
-            <button className="c-button o-primary" onClick={() => this.saveImage()}>Save Screenshot</button>}
+            <button onClick={() => this.saveImage()}>Save Screenshot</button>}
         </div>
-        {this.state.isLoading && <Spinner />}
+        {this.state.isLoading && <Spinner label="Setting up screenshot" />}
         {this.props.preview && imageUrl && <div className="preview-container">
           <img src={imageUrl} className="capture-preview" alt="Screenshot Preview" />
         </div>}
