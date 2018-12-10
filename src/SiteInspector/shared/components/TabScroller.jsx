@@ -3,9 +3,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 const TabScroller = ({ direction, isVisible, onScroll }) => (
-  !isVisible ? null : <a
+  !isVisible ? null : <button
     className={`panel-tabs-scroller ${direction}-scroller si-glyph si-glyph-chevron-${direction}`}
-    href="javascript:void(0)" onClick={() => onScroll(direction)}
+    onClick={() => onScroll(direction)}
   />);
 
 TabScroller.propTypes = {

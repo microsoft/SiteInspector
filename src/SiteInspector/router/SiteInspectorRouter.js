@@ -135,7 +135,7 @@ class ShellInspectorRouter extends React.Component {
 
   render() {
     const { tabs, initialPath, setPath } = this.props;
-    const lastTab = this.tabScrollArea.current && this.tabScrollArea.current.childNodes.length > 0 ?
+    const lastTab = this.tabScrollArea.current && this.tabScrollArea.current.childNodes.length ?
       this.tabScrollArea.current.children[this.tabScrollArea.current.childNodes.length - 1] : null;
     const needScroller = lastTab
       ? this.tabScrollArea.current && lastTab &&
