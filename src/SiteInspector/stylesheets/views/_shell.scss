@@ -1,6 +1,6 @@
 $shell-tab-dimension: 70px;
 $shell-tab-nest-depth: 30px;
-$shell-tab-logo-size-denominator: 3.3;
+$shell-tab-logo-size-denominator: 3;
 $scroll-button-animation: all .5s ease;
 
 .shell-panel {
@@ -34,7 +34,7 @@ $scroll-button-animation: all .5s ease;
       .shell-icon {
         position: absolute;
         left: $shell-tab-nest-depth / 2 + 8px;
-        top: -$shell-tab-dimension / 2 + 7px ;
+        top: -$shell-tab-dimension / 2 + 6px ;
         height: $shell-tab-dimension / $shell-tab-logo-size-denominator;
         width: $shell-tab-dimension / $shell-tab-logo-size-denominator;
       }

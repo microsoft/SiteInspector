@@ -13,7 +13,7 @@ const SITab = require('-!babel-loader!svg-react-loader!../../assets/SITab.svg');
 const Logo = config.logo
   ? config.logo
   // eslint-disable-next-line
-    : require('-!babel-loader!svg-react-loader!../../assets/MSFTLogo.svg');
+    : require('-!babel-loader!svg-react-loader!../../assets/SILogo.svg');
 
 const Shell = ({ siteInspectorInitialized, currentPath, position,
     tabs, visible, onToggleShell, setCurrentPath, setShellPanelPosition,

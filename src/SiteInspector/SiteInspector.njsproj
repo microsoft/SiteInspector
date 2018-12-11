@@ -72,7 +72,7 @@
     <Content Include=".eslintrc" />
     <Content Include=".gitignore" />
     <Content Include=".npmrc" />
-    <Content Include="assets\MSFTLogo.svg" />
+    <Content Include="assets\SILogo.svg" />
     <Content Include="assets\SITab.svg" />
     <Content Include="fonts\FWMDL2.eot" />
     <Content Include="fonts\FWMDL2.svg" />
