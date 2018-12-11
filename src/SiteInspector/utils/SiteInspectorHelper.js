@@ -36,3 +36,11 @@ export const areArraysEqual = (array1, array2) => {
 
   return true;
 };
+
+export function getConfigTabTitle(tabId) {
+  if (config.tabs && config.tabs.length) {
+    const targetTabs = config.tabs.filter(tab => tab.id === tabId);
+    return targetTabs.length ? targetTabs[0].title : '';
+  }
+  return '';
+}

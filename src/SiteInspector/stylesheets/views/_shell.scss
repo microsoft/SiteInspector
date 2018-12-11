@@ -1,6 +1,7 @@
 $shell-tab-dimension: 70px;
 $shell-tab-nest-depth: 30px;
 $shell-tab-logo-size-denominator: 3.3;
+$scroll-button-animation: all .5s ease;
 
 .shell-panel {
   display: block;
@@ -41,7 +42,7 @@ $shell-tab-logo-size-denominator: 3.3;
   }
 
   .shadow{
-    -webkit-filter: drop-shadow(3px 3px 3px #777); 
+    -webkit-filter: drop-shadow(3px 3px 3px #777);
     filter: drop-shadow(3px 3px 3px #777);
   }
 
@@ -180,17 +181,31 @@ $shell-tab-logo-size-denominator: 3.3;
         background: $panel-background-color;
 
         .panel-tabs, .si-nav {
-            overflow-x: auto;
+            position: relative;
+            overflow-x: hidden;
             white-space: nowrap;
             background-color: $tab-container-background-color;
-            transform: rotateX(180deg);
             flex-shrink: 1;
 
+            &.with-scroll {
+              padding-right: 10px;
+            }
+
             .si-group {
+                &.with-scroll-left {
+                  padding-left: 34px;
+                }
+
+                position: relative;
                 display: flex;
+                left: 0;
                 padding: 0 8px;
-                transform: rotateX(180deg);
                 padding-top: 5px;
+                -webkit-transition: $scroll-button-animation;
+                -moz-transition: $scroll-button-animation;
+                -o-transition: $scroll-button-animation;
+                -ms-transition: $scroll-button-animation;
+                transition: $scroll-button-animation;
             }
 
             .si-select-button {
@@ -204,6 +219,31 @@ $shell-tab-logo-size-denominator: 3.3;
             .si-select-button.active {
                 color: $panel-font-color;
                 background-color: $panel-background-color;
+            }
+
+            .panel-tabs-scroller {
+              border: none;
+              position: absolute;
+              padding: 10px 5px;
+              background-color: #000;
+              color: rgb(230, 230, 230);
+              bottom: 0;
+            }
+
+            .right-scroller {
+              right: 0;
+
+              &:before {
+                padding-top: 5px;
+              }
+            }
+
+            .left-scroller {
+              left: 0;
+
+              &:before {
+                padding-top: 5px;
+              }
             }
         }
 

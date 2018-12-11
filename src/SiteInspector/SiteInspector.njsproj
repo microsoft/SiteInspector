@@ -41,6 +41,7 @@
     <Compile Include="shared\reducer.js" />
     <Compile Include="shared\components\Blade.jsx" />
     <Compile Include="shared\components\Tab.jsx" />
+    <Compile Include="shared\components\TabScroller.jsx" />
     <Compile Include="shared\components\Spinner.jsx" />
     <Compile Include="shared\config.js" />
     <Compile Include="shared\actions.js" />

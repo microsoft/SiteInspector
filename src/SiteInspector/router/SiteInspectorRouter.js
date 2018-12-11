@@ -11,8 +11,11 @@ import {
 } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import routes from './routes';
+import TabScroller from '../shared/components/TabScroller';
 
 let previousHeight = '0px';
+let previousShowLeftScroll = false;
+let previousShowRightScroll = false;
 
 class ShellInspectorRouter extends React.Component {
   static renderTabComponent(tabComponent) {
@@ -25,9 +28,14 @@ class ShellInspectorRouter extends React.Component {
 
     this.state = {
       maxHeight: '100%',
+      leftOnscreenTab: 0,
+      showLeftScroll: false,
+      showRightScroll: true,
+      scrollAreaLeft: 0,
     };
 
     this.updatePanelMaxHeight = this.updatePanelMaxHeight.bind(this);
+    this.tabScrollArea = React.createRef();
   }
 
   componentDidMount() {
@@ -39,9 +47,13 @@ class ShellInspectorRouter extends React.Component {
     const result = nextProps.tabs !== this.props.tabs ||
       nextProps.initialPath !== this.props.initialPath ||
       this.state.maxHeight !== previousHeight ||
-      (nextProps.routesUpdated && nextProps.routesUpdated !== this.props.routesUpdated);
+      (nextProps.routesUpdated && nextProps.routesUpdated !== this.props.routesUpdated) ||
+      this.state.showLeftScroll !== previousShowLeftScroll ||
+      this.state.showRightScroll !== previousShowRightScroll;
 
     previousHeight = this.state.maxHeight;
+    previousShowLeftScroll = this.state.showLeftScroll;
+    previousShowRightScroll = this.state.showRightScroll;
 
     return result;
   }
@@ -65,12 +77,78 @@ class ShellInspectorRouter extends React.Component {
     this.setState({ maxHeight: height });
   }
 
+  scrollTabs = (direction) => {
+    const scrollArea = this.tabScrollArea.current;
+
+    if (!scrollArea) {
+      return;
+    }
+
+    const tabCount = scrollArea.childNodes.length;
+
+    if (tabCount === 0) {
+      return;
+    }
+
+    let leftOnscreenTab = this.state.leftOnscreenTab;
+    const leftPadding = scrollArea.children[0].offsetLeft;
+    const lastTab = scrollArea.children[tabCount - 1];
+    const lastTabRightEdge = lastTab.offsetLeft + lastTab.offsetWidth;
+
+    if (direction === 'right') {
+      leftOnscreenTab += 2;
+
+      if (leftOnscreenTab >= tabCount - 2) {
+        leftOnscreenTab = tabCount - 2;
+      }
+
+      const areaLeft = (0 - scrollArea.children[leftOnscreenTab].offsetLeft) + leftPadding;
+
+      this.setState({
+        scrollAreaLeft: areaLeft,
+        leftOnscreenTab,
+        showRightScroll: (leftOnscreenTab < tabCount - 2 &&
+          lastTabRightEdge + areaLeft > (scrollArea.offsetWidth + (leftPadding * 2))),
+        showLeftScroll: true,
+      },
+      () => { this.forceUpdate(); },
+      );
+    }
+
+    if (direction === 'left') {
+      leftOnscreenTab -= 2;
+
+      if (leftOnscreenTab < 0) {
+        leftOnscreenTab = 0;
+      }
+
+      this.setState({
+        scrollAreaLeft: (0 - scrollArea.children[leftOnscreenTab].offsetLeft) + leftPadding,
+        leftOnscreenTab,
+        showRightScroll: true,
+        showLeftScroll: leftOnscreenTab !== 0,
+      },
+      () => { this.forceUpdate(); },
+      );
+    }
+  };
+
   render() {
     const { tabs, initialPath, setPath } = this.props;
+    const lastTab = this.tabScrollArea.current && this.tabScrollArea.current.childNodes.length ?
+      this.tabScrollArea.current.children[this.tabScrollArea.current.childNodes.length - 1] : null;
+    const needScroller = lastTab
+      ? this.tabScrollArea.current && lastTab &&
+        ((lastTab.offsetWidth + lastTab.offsetLeft) - this.tabScrollArea.current.offsetWidth > 0)
+      : false;
+    const leftStyle = {
+      left: `${this.state.scrollAreaLeft}px`,
+    };
+
     return (<Router>
       <div className="flex-column">
-        <div id="siPanelTabs" className="panel-tabs">
-          <div className="si-group">
+        <div id="siPanelTabs" className={`panel-tabs ${needScroller && 'with-scroll'}`}>
+          <div className={`si-group ${this.state.scrollAreaLeft < 0 && 'with-scroll-left'}`} ref={this.tabScrollArea} style={leftStyle}>
             {tabs.map((tab) => {
               const route = routes.find(r => r.id.toUpperCase() === tab.toUpperCase());
               return route
@@ -85,6 +163,16 @@ class ShellInspectorRouter extends React.Component {
                 : null;
             })}
           </div>
+          <TabScroller
+            direction="left"
+            onScroll={d => this.scrollTabs(d)}
+            isVisible={needScroller && this.state.showLeftScroll}
+          />
+          <TabScroller
+            direction="right"
+            onScroll={d => this.scrollTabs(d)}
+            isVisible={needScroller && this.state.showRightScroll}
+          />
         </div>
         <div className="panel-content" style={{ maxHeight: this.state.maxHeight }}>
           <Switch>
