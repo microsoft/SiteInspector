@@ -32,7 +32,7 @@ exports[`Primary container view tests Shell component tests Panel is rendered 1`
       <ActionMenu
         actionTrigger={
           <span
-            className="si-glyph si-glyph-settings"
+            className="fas fa-cog"
           />
         }
         menu={
@@ -56,7 +56,7 @@ exports[`Primary container view tests Shell component tests Panel is rendered 1`
       >
         <span
           aria-hidden="true"
-          className="si-glyph si-glyph-cancel"
+          className="fas fa-times"
           onClick={[Function]}
         />
       </div>

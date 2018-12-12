@@ -13,7 +13,7 @@ const SITab = require('-!babel-loader!svg-react-loader!../../assets/SITab.svg');
 const Logo = config.logo
   ? config.logo
   // eslint-disable-next-line
-    : require('-!babel-loader!svg-react-loader!../../assets/MSFTLogo.svg');
+    : require('-!babel-loader!svg-react-loader!../../assets/SILogo.svg');
 
 const Shell = ({ siteInspectorInitialized, currentPath, position,
     tabs, visible, onToggleShell, setCurrentPath, setShellPanelPosition,
@@ -54,7 +54,7 @@ const Shell = ({ siteInspectorInitialized, currentPath, position,
               </div>
               <div className="si-header-right">
                 <ActionMenu
-                  actionTrigger={(<span className="si-glyph si-glyph-settings" />)}
+                  actionTrigger={(<span className="fas fa-cog" />)}
                   menu={[{
                     content: `Position ${position === 'right' ? 'Left' : 'Right'}`,
                     onClick: () => { setShellPanelPosition(position === 'right' ? 'left' : 'right'); },
@@ -66,7 +66,7 @@ const Shell = ({ siteInspectorInitialized, currentPath, position,
                   }]}
                 />
                 <div title="Close StoreInspector" className="si-panel-glyph">
-                  <span className="si-glyph si-glyph-cancel" aria-hidden="true" onClick={onToggleShell} />
+                  <span className="fas fa-times" aria-hidden="true" onClick={onToggleShell} />
                 </div>
               </div>
             </div>

@@ -72,13 +72,8 @@
     <Content Include=".eslintrc" />
     <Content Include=".gitignore" />
     <Content Include=".npmrc" />
-    <Content Include="assets\MSFTLogo.svg" />
+    <Content Include="assets\SILogo.svg" />
     <Content Include="assets\SITab.svg" />
-    <Content Include="fonts\FWMDL2.eot" />
-    <Content Include="fonts\FWMDL2.svg" />
-    <Content Include="fonts\FWMDL2.ttf" />
-    <Content Include="fonts\FWMDL2.woff" />
-    <Content Include="fonts\FWMDL2.woff2" />
     <Content Include="index.jsx" />
     <Content Include="package.json" />
     <Content Include="public\index.ejs" />
@@ -88,7 +83,6 @@
     <Content Include="stylesheets\components\_tabnavigation.scss" />
     <Content Include="stylesheets\main.scss" />
     <Content Include="stylesheets\views\_shell.scss" />
-    <Content Include="stylesheets\_glyphicons.scss" />
     <Content Include="stylesheets\_variables.scss" />
     <Content Include="tests\shared\__snapshots__\components.test.js.snap" />
     <Content Include="tests\views\__snapshots__\shell.test.js.snap" />

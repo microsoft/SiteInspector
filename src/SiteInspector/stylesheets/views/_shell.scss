@@ -1,6 +1,6 @@
 $shell-tab-dimension: 70px;
 $shell-tab-nest-depth: 30px;
-$shell-tab-logo-size-denominator: 3.3;
+$shell-tab-logo-size-denominator: 3;
 $scroll-button-animation: all .5s ease;
 
 .shell-panel {
@@ -34,7 +34,7 @@ $scroll-button-animation: all .5s ease;
       .shell-icon {
         position: absolute;
         left: $shell-tab-nest-depth / 2 + 8px;
-        top: -$shell-tab-dimension / 2 + 7px ;
+        top: -$shell-tab-dimension / 2 + 6px ;
         height: $shell-tab-dimension / $shell-tab-logo-size-denominator;
         width: $shell-tab-dimension / $shell-tab-logo-size-denominator;
       }
@@ -135,11 +135,11 @@ $scroll-button-animation: all .5s ease;
         }
 
         button.si-action-trigger {
-            color: black;
+            color: #4d5a67;
             margin-top: 0;
             height: $header-height;
             min-width: $header-height;
-            padding: 11px 0;
+            padding: 13px 0;
 
             .si-glyph-settings {
                 font-size: 26px;
@@ -222,6 +222,8 @@ $scroll-button-animation: all .5s ease;
             }
 
             .panel-tabs-scroller {
+              height: 100%;
+              width: 27px;
               border: none;
               position: absolute;
               padding: 10px 5px;

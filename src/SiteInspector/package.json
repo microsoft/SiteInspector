@@ -18,6 +18,7 @@
   "author": "Microsoft",
   "license": "MIT",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.6.0",
     "classnames": "^2.2.5",
     "es6-promise": "^4.2.4",
     "lodash.assignin": "^4.2.0",

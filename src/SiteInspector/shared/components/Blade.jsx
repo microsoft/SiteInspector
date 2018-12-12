@@ -12,7 +12,7 @@ const Blade = ({ visible, title, closeHandler, displayUI, isLargerWidth }) => {
     <div className={`si-blade flex-column ${BladeClassNames()}`}>
       <div className="si-blade-header">
         <div className="si-blade-header-title">{title}</div>
-        <a href="javascript:void(0)" className="si-close-panel-icon si-glyph si-glyph-clear" onClick={closeHandler} />
+        <a href="javascript:void(0)" className="si-close-panel-icon fas fa-times" onClick={closeHandler} />
       </div>
       <div className="si-blade-content flex-column">
         {visible && displayUI}
