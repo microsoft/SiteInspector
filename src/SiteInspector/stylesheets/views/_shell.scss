@@ -222,6 +222,8 @@ $scroll-button-animation: all .5s ease;
             }
 
             .panel-tabs-scroller {
+              height: 100%;
+              width: 27px;
               border: none;
               position: absolute;
               padding: 10px 5px;
