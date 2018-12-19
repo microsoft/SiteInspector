@@ -35,13 +35,24 @@ class CaptureViewer extends React.Component {
         if (si) {
           si.parentElement.removeChild(si);
         }
+
+        const style = cloneDoc.createElement('style');
+        style.innerHTML = '* { animation-name: unset !important; -webkit-animation-duration: 0s !important; ' +
+          'animation-duration: 0s !important; -webkit-animation-fill-mode: none !important; animation-fill-mode: none !important; ' +
+          '-webkit-transition: none !important; -moz-transition: none !important; -o-transition: none !important; transition: none !important; }';
+        cloneDoc.body.appendChild(style);
+
+        cloneDoc.body.scrollTop = 0;
+
         const sleep = (miliseconds) => {
           const currentTime = new Date().getTime();
           // eslint-disable-next-line no-empty
           while (currentTime + miliseconds >= new Date().getTime()) {
           }
         };
+
         sleep(config.captureDelay);
+
         return cloneDoc;
       },
     }).then((canvas) => {
@@ -56,6 +67,8 @@ class CaptureViewer extends React.Component {
       this.setState({
         isLoading: false,
       });
+    }).catch(() => {
+      // TODO: Log error
     });
   }
 
@@ -86,10 +99,18 @@ class CaptureViewer extends React.Component {
   }
 }
 
+CaptureViewer.defaultProps = {
+  captureScreenshot: null,
+  preview: null,
+  captureFail: null,
+};
+
 CaptureViewer.propTypes = {
-  captureScreenshot: PropTypes.string.isRequired,
-  captureFail: PropTypes.func.isRequired,
-  preview: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/forbid-prop-types
+  captureScreenshot: PropTypes.func,
+  captureFail: PropTypes.func,
+  // eslint-disable-next-line react/forbid-prop-types
+  preview: PropTypes.object,
 };
 
 export default CaptureViewer;
