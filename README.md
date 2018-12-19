@@ -20,13 +20,13 @@ To try out this example, clone the project and install [npm](https://github.com/
 npm run demo
 ```
 
-This will launch a test server (http://localhost:3000) with an example of the SiteInspector.JS shell embedded in the page. The small Microsoft logo tab on the left of the page can be clicked to slide out the blade framework as shown on the right.
+This will launch a test server (http://localhost:3000) with an example of the SiteInspector.JS shell embedded in the page. The small laptop logo tab on the left of the page can be clicked to slide out the blade framework as shown on the right.
 
 <img src="https://redir.blob.core.windows.net/assets/GitHubSICapture.PNG">
 
 # Building and hosting your own files
 
-The SiteInspector framework has the ability to be hosted anywhere you chose. You can include the shell (siteinspector.JS) and tab (yourcustomertab1.js, yourcustomertab2.js) files in a folder in your website, or they can be hosted externally to your site in a blob store or another HTTP location.
+The SiteInspector framework has the ability to be hosted anywhere you chose. You can include the shell (siteinspector.js) and tab (yourcustomertab1.js, yourcustomertab2.js) files in a folder in your website, or they can be hosted externally to your site in a blob store or another HTTP location.
 
 To use SiteInspector on your site, all you need is to include the loader script at the top of the pages on your website. Here’s an example of a SiteInspector site using Azure blob store to hosts it’s files.
 
@@ -76,7 +76,7 @@ Next, you'll need to build the tabs in a similar fashion.
 
 For instructions on writing your own customer tabs, see the doc for the [Getting Started Tab](src/Tabs/GettingStartedTab/README.md).
 
-Once you've built the shell and the tabs, you can uplkoad them to blog or yourwebsite, use the loader script shown above to start using SiteInspector.
+Once you've built the shell and the tabs, you can upload them to a blob store, CDN, or your website and use the loader script shown above to start using SiteInspector.
 
 # Contributing
 
