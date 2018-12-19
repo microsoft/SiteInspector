@@ -32,13 +32,7 @@ To use SiteInspector on your site, all you need is to include the loader script 
 
 
 ```sh
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta charset="utf-8" />
-    <title></title>
-</head>
-<body>
+
     <script>
             (function (d, s, si) {
                 let m = d.getElementsByTagName(s)[0];
@@ -60,9 +54,6 @@ To use SiteInspector on your site, all you need is to include the loader script 
             };
         })(document, "script", "https://redir.blob.core.windows.net/assets/siteinspector.js");
     </script>
-    <h2>Test Host Website</h2>
-</body>
-</html>
 ```
 To generate the shell, navigate to the [src/SiteInspector](src/SiteInspector) folder and run the following npm command.
 
