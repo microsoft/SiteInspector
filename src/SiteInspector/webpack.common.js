@@ -36,7 +36,7 @@ const webConfig = {
       },
       {
         test: /\.(woff|woff2|ttf|eot|svg)(\?v=[a-z0-9]\.[a-z0-9]\.[a-z0-9])?$/,
-        loader: 'url-loader?limit=100000',
+        loader: 'url-loader?limit=100000&name=fonts/[hash].[ext]',
       },
     ],
   },
