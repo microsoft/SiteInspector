@@ -11,9 +11,11 @@ information to help you manage and maintain your site.</td>
   </tr>  
 </table>
 
-# Running the sample
+# Running the demo
 
-To try out this example, clone the project and install [npm](https://github.com/npm/cli) if you don't have it already.
+To quickly see SiteInspector in action, try out this demo. Clone the project and install [npm](https://github.com/npm/cli) if you don't have it already. 
+
+Then run:
 
 
 ```sh
