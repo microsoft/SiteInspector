@@ -73,4 +73,4 @@ Once you've built the shell and the tabs, you can upload them to a blob store, C
 
 # Contributing
 
-See [contributing](contributing.md).
+See [contributing](CONTRIBUTING.md).
